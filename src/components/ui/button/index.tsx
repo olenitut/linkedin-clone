@@ -1,12 +1,19 @@
-import buttonVariants from "./button-variants";
+import buttonVariants, {
+  IButtonSizes,
+  IButtonVariants,
+} from "./button-variants";
 
 type Props = {
-  variant?: "primary" | "secondary";
-  size?: "small" | "medium";
+  variant?: IButtonVariants;
+  size?: IButtonSizes;
   children: string | React.ReactNode;
 };
 
-const Button = ({ variant = "primary", children, size = "medium" }: Props) => {
+const Button = ({
+  variant = IButtonVariants.PRIMARY,
+  children,
+  size = IButtonSizes.MEDIUM,
+}: Props) => {
   const classes = buttonVariants({ intent: variant, size });
 
   return <div className={classes}>{children}</div>;
