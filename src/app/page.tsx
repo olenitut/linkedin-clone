@@ -1,8 +1,5 @@
-import Button from "@/components/ui/button";
-import {
-  IButtonSizes,
-  IButtonVariants,
-} from "@/components/ui/button/button-variants";
+import { Button } from '@/components/ui/button';
+import { IButtonSizes, IButtonVariants } from '@/components/ui/button/button-variants';
 
 export default function Home() {
   return (

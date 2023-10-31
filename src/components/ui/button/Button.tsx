@@ -1,7 +1,4 @@
-import buttonVariants, {
-  IButtonSizes,
-  IButtonVariants,
-} from "./button-variants";
+import buttonVariants, { IButtonSizes, IButtonVariants } from './button-variants';
 
 type Props = {
   variant?: IButtonVariants;
@@ -9,14 +6,12 @@ type Props = {
   children: string | React.ReactNode;
 };
 
-const Button = ({
+export function Button({
   variant = IButtonVariants.PRIMARY,
   children,
   size = IButtonSizes.MEDIUM,
-}: Props) => {
+}: Props) {
   const classes = buttonVariants({ intent: variant, size });
 
   return <div className={classes}>{children}</div>;
-};
-
-export default Button;
+}
