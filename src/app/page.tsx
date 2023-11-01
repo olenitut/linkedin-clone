@@ -4,8 +4,8 @@ import { IButtonSizes, IButtonVariants } from '@/components/ui/button/button-var
 export default function Home() {
   return (
     <main>
-      <Button>Primary Med</Button>
-      <Button variant={IButtonVariants.PRIMARY} size={IButtonSizes.SMALL}>
+      <Button onClick={() => {}}>Primary Medium</Button>
+      <Button variant={IButtonVariants.PRIMARY} size={IButtonSizes.SMALL} onClick={() => {}}>
         Secondary Small
       </Button>
     </main>
