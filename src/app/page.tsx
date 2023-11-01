@@ -1,3 +1,4 @@
+'use client';
 import { Button } from '@/components/ui/button';
 import { IButtonSizes, IButtonVariants } from '@/components/ui/button/button-variants';
 
