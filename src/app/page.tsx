@@ -24,25 +24,44 @@ export default function Home() {
           size={ButtonSize.Medium}
           variant={ButtonVariant.Ghost}
           onClick={() => {}}
-          icon={<PhotoIcon className={'h-6 w-6 text-blue-500'} />}
+          id='share'
         >
           Share
         </Button>
-        <Button
-          size={ButtonSize.Medium}
-          variant={ButtonVariant.Ghost}
-          onClick={() => {}}
-          icon={<BriefcaseIcon className={'h-6 w-6 text-purple-500'} />}
-        >
+        <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} onClick={() => {}} id='job'>
           Job
         </Button>
         <Button
           size={ButtonSize.Medium}
           variant={ButtonVariant.Ghost}
           onClick={() => {}}
-          icon={<NewspaperIcon className={'h-6 w-6 text-orange-500'} />}
+          id='article'
         >
           Write article
+        </Button>
+      </div>
+      <div className='flex wrap gap-4 m-4'>
+        <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} onClick={() => {}} id='like'>
+          Like
+        </Button>
+        <Button
+          size={ButtonSize.Medium}
+          variant={ButtonVariant.Ghost}
+          onClick={() => {}}
+          id='comment'
+        >
+          Comment
+        </Button>
+        <Button
+          size={ButtonSize.Medium}
+          variant={ButtonVariant.Ghost}
+          onClick={() => {}}
+          id='repost'
+        >
+          Repost
+        </Button>
+        <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} onClick={() => {}} id='send'>
+          Send
         </Button>
       </div>
     </main>
