@@ -4,6 +4,7 @@ export enum ButtonVariant {
   Primary = 'primary',
   Secondary = 'secondary',
   Ghost = 'ghost',
+  Circle = 'circle',
 }
 
 export enum ButtonSize {
@@ -47,7 +48,16 @@ export const buttonVariants = cva(
           'text-gray-600',
           'border-0',
           'gap-2',
-          'hover:bg-gray-50',
+          'hover:bg-rose-50',
+        ],
+        [ButtonVariant.Circle]: [
+          'bg-transparent',
+          'text-gray-600',
+          'border-0',
+          'justify-center',
+          'hover:bg-rose-50',
+          'rounded-full',
+          'px-3',
         ],
       },
       size: {
