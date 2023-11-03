@@ -26,7 +26,7 @@ export default function Home() {
         <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} id='job'>
           Job
         </Button>
-        <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost}>
+        <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} id='article'>
           Write article
         </Button>
       </div>
@@ -47,7 +47,7 @@ export default function Home() {
           size={ButtonSize.Medium}
           variant={ButtonVariant.Ghost}
           id='follow'
-          extraClasses='text-rose-500'
+          extraClasses='!text-red-700'
         >
           Follow
         </Button>
