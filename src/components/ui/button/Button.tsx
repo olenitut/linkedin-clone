@@ -1,4 +1,5 @@
 import React from 'react';
+import { clsx } from 'clsx';
 import { ButtonVariant, ButtonSize, buttonVariants } from './button-variants';
 import { icons } from './icons';
 
@@ -11,14 +12,8 @@ type Props = {
   extraClasses?: string;
 };
 
-export function Button({
-  variant,
-  size,
-  onClick,
-  children,
-  id,
-}: Props) {
-  const classes = buttonVariants({ intent: variant, size });
+export function Button({ variant, size, onClick, children, id, extraClasses }: Props) {
+  const classes = clsx(buttonVariants({ intent: variant, size }), extraClasses);
 
   return (
     <button className={classes} onClick={onClick}>
