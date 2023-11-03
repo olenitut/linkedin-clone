@@ -8,22 +8,20 @@ type Props = {
   children?: string | React.ReactNode;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   id?: string;
-  className?: string;
-  style?: React.CSSProperties;
+  extraClasses?: string;
 };
 
 export function Button({
-  variant = ButtonVariant.Primary,
-  size = ButtonSize.Medium,
+  variant,
+  size,
   onClick,
   children,
   id,
-  style,
 }: Props) {
   const classes = buttonVariants({ intent: variant, size });
 
   return (
-    <button className={classes} onClick={onClick} style={style}>
+    <button className={classes} onClick={onClick}>
       {id && icons[id]}
       {children}
     </button>

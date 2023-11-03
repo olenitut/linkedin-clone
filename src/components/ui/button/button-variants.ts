@@ -72,9 +72,5 @@ export const buttonVariants = cva(
         size: ButtonSize.Medium,
       },
     ],
-    defaultVariants: {
-      intent: ButtonVariant.Primary,
-      size: ButtonSize.Medium,
-    },
   }
 );

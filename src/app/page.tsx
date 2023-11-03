@@ -5,12 +5,18 @@ export default function Home() {
   return (
     <main>
       <div className='flex wrap gap-4 m-4'>
-        <Button size={ButtonSize.Large}>Large</Button>
-        <Button>Medium</Button>
+        <Button size={ButtonSize.Large} variant={ButtonVariant.Primary}>
+          Large
+        </Button>
+        <Button variant={ButtonVariant.Primary} size={ButtonSize.Medium}>
+          Medium
+        </Button>
         <Button variant={ButtonVariant.Primary} size={ButtonSize.Small}>
           Small
         </Button>
-        <Button variant={ButtonVariant.Secondary}>Secondary</Button>
+        <Button variant={ButtonVariant.Secondary} size={ButtonSize.Medium}>
+          Secondary
+        </Button>
       </div>
 
       <div className='flex wrap gap-4 m-4'>
@@ -37,45 +43,21 @@ export default function Home() {
         <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} id='send'>
           Send
         </Button>
-        <Button
-          style={{ color: '#d42a5b' }}
-          size={ButtonSize.Medium}
-          variant={ButtonVariant.Ghost}
-          id='follow'
-        >
+        <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} id='follow'>
           Follow
         </Button>
       </div>
       <div className='flex wrap gap-4 m-4'>
-        <Button size={ButtonSize.Medium} variant={ButtonVariant.Circle} id='control' />
-        <Button size={ButtonSize.Medium} variant={ButtonVariant.Circle} id='close' />
-        <Button size={ButtonSize.Medium} variant={ButtonVariant.Circle} id='plus' />
-        <Button size={ButtonSize.Medium} variant={ButtonVariant.Circle} id='smile' />
-        <Button size={ButtonSize.Medium} variant={ButtonVariant.Circle} id='star' />
-        <Button
-          size={ButtonSize.Medium}
-          variant={ButtonVariant.Circle}
-          id='controlMini'
-          style={{ width: '40px', height: '40px' }}
-        />
-        <Button
-          size={ButtonSize.Medium}
-          variant={ButtonVariant.Circle}
-          id='pencil'
-          style={{ width: '40px', height: '40px' }}
-        />
-        <Button
-          size={ButtonSize.Medium}
-          variant={ButtonVariant.Circle}
-          id='up'
-          style={{ width: '40px', height: '40px' }}
-        />
-        <Button
-          size={ButtonSize.Medium}
-          variant={ButtonVariant.Circle}
-          id='down'
-          style={{ width: '40px', height: '40px' }}
-        />
+        <Button variant={ButtonVariant.Circle} id='control' />
+        <Button variant={ButtonVariant.Circle} id='close' />
+        <Button variant={ButtonVariant.Circle} id='plus' />
+        <Button variant={ButtonVariant.Circle} id='smile' />
+        <Button variant={ButtonVariant.Circle} id='star' />
+
+        <Button variant={ButtonVariant.Circle} id='controlMini' />
+        <Button variant={ButtonVariant.Circle} id='pencil' />
+        <Button variant={ButtonVariant.Circle} id='up' />
+        <Button variant={ButtonVariant.Circle} id='down' />
       </div>
     </main>
   );
