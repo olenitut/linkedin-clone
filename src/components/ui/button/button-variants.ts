@@ -21,7 +21,7 @@ export const buttonVariants = cva(
     'w-max',
     'cursor-pointer',
     'flex',
-    'justify-between',
+    'justify-center',
     'items-center',
     'duration-300',
     'transition',
@@ -54,15 +54,15 @@ export const buttonVariants = cva(
           'bg-transparent',
           'text-gray-600',
           'border-0',
-          'justify-center',
           'hover:bg-rose-50',
           'rounded-full',
-          'px-3',
+          'h-12',
+          'w-12',
         ],
       },
       size: {
-        [ButtonSize.Small]: ['text-sm', 'py-1', 'px-4', 'rounded-sm', 'h-9'],
-        [ButtonSize.Medium]: ['text-base', 'py-2', 'px-4', 'h-12'],
+        [ButtonSize.Small]: ['text-sm', 'p-2', 'rounded-sm', 'h-10'],
+        [ButtonSize.Medium]: ['text-base', 'py-2', 'px-3', 'h-12'],
         [ButtonSize.Large]: ['text-base', 'py-2', 'px-7', 'h-14', 'uppercase'],
       },
     },
@@ -72,9 +72,5 @@ export const buttonVariants = cva(
         size: ButtonSize.Medium,
       },
     ],
-    defaultVariants: {
-      intent: ButtonVariant.Primary,
-      size: ButtonSize.Medium,
-    },
   }
 );
