@@ -1,12 +1,7 @@
-## Getting Started
+## Tailwind 
 
-npm i 
+1. Prefer pre-built components/variants wherever possible
+2. If not possible, prefer adding extraClasses to the component (try to do whatever it takes to avoid conflicting classes)
+3. In special occasions, where styles are dynamically coming from js, we can opt for important (!) or inline styles. 
 
-npm run dev
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
