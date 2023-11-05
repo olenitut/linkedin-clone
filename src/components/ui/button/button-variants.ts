@@ -33,6 +33,7 @@ export const buttonVariants = cva(
           'text-red-50',
           'border-red-700',
           'hover:bg-red-800',
+          'hover:border-red-800',
           'shadow-sm',
           'shadow-red-900',
           'w-max',
