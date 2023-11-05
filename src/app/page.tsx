@@ -1,5 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { ButtonSize, ButtonVariant } from '@/components/ui/button/button-variants';
+import { Typography } from '@/components/ui/typography';
+import { TypographyVariant } from '@/components/ui/typography/typography-variants';
 
 export default function Home() {
   return (
@@ -47,7 +49,7 @@ export default function Home() {
           size={ButtonSize.Medium}
           variant={ButtonVariant.Ghost}
           id='follow'
-          extraClasses='!text-red-700'
+          className='!text-red-700'
         >
           Follow
         </Button>
@@ -59,10 +61,16 @@ export default function Home() {
         <Button variant={ButtonVariant.Circle} id='smile' />
         <Button variant={ButtonVariant.Circle} id='star' />
 
-        <Button variant={ButtonVariant.Circle} id='controlMini' extraClasses='w-10 h-10' />
-        <Button variant={ButtonVariant.Circle} id='pencil' extraClasses='w-10 h-10' />
-        <Button variant={ButtonVariant.Circle} id='up' extraClasses='w-10 h-10' />
-        <Button variant={ButtonVariant.Circle} id='down' extraClasses='w-10 h-10' />
+        <Button variant={ButtonVariant.Circle} id='controlMini' className='!w-10 !h-10' />
+        <Button variant={ButtonVariant.Circle} id='pencil' className='!w-10 !h-10' />
+        <Button variant={ButtonVariant.Circle} id='up' className='!w-10 !h-10' />
+        <Button variant={ButtonVariant.Circle} id='down' className='!w-10 !h-10' />
+      </div>
+      <div>
+        <Typography>
+          You may need full control over your StyleSheet output. Your job might require you to use a
+          framework such as Tailwind CSS. You might just prefer writing your own CSS.
+        </Typography>
       </div>
     </main>
   );
