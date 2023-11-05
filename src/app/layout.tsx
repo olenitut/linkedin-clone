@@ -8,20 +8,20 @@ export const metadata: Metadata = {
   title: 'WorkWave',
   description: 'Suggesting a wave of professional activity and connections.',
   icons: {
-    icon: '/icon.png',
-    apple: '/apple-icon.png',
+    icon: '/images/icon.png',
+    apple: '/images/apple-icon.png',
     other: [
       {
         rel: 'icon',
-        url: '/favicon-16x16.png',
+        url: '/images/favicon-16x16.png',
       },
       {
         rel: 'android-icon',
-        url: '/android-icon.png',
+        url: '/images/android-icon.png',
       },
       {
         rel: 'android-192-icon',
-        url: '/android-192-icon.png',
+        url: '/images/android-192-icon.png',
       },
     ],
   },
