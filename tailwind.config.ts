@@ -13,6 +13,9 @@ const config: Config = {
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    fontFamily: {
+      sans: ['var(--font-space-grotesk)'],
+    },
     colors: {
       red: {
         '50': '#fff1f1',
