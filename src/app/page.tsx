@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ButtonSize, ButtonVariant } from '@/components/ui/button/button-variants';
+import { TextInput } from '@/components/ui/inputs';
 
 export default function Home() {
   return (
@@ -63,6 +64,10 @@ export default function Home() {
         <Button variant={ButtonVariant.Circle} id='pencil' extraClasses='w-10 h-10' />
         <Button variant={ButtonVariant.Circle} id='up' extraClasses='w-10 h-10' />
         <Button variant={ButtonVariant.Circle} id='down' extraClasses='w-10 h-10' />
+      </div>
+
+      <div className='flex wrap gap-4 m-4'>
+        <TextInput label='First Name' id='first-name' placeholder='Olha Dovbush' className='w-80' />
       </div>
     </main>
   );
