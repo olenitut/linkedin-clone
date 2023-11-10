@@ -31,6 +31,9 @@ const config: Config = {
         slideIn: 'slideIn 1440ms cubic-bezier(0.14, 0.78, 0.36, 1)',
       },
     },
+    fontFamily: {
+      sans: ['var(--font-space-grotesk)'],
+    },
     colors: {
       red: {
         '50': '#fff1f1',
