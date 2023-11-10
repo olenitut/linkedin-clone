@@ -1,22 +1,31 @@
 import { cva } from 'class-variance-authority';
 
-export enum ITypographyVariants {
-  P = 'p',
-  H1 = 'h1',
-  // ADD MORE
+export enum TypographyVariant {
+  Base = 'Base',
+  Small = 'Small',
+  Large = 'Large',
+  ExtraLarge = 'ExtraLarge',
+  h1 = 'h1',
+  h2 = 'h2',
+  h3 = 'h3',
+  h4 = 'h4',
 }
 
-const buttonVariants = cva(['font-semibold'], {
+export const typographyVariants = cva('font-sans', {
   variants: {
     intent: {
-      [ITypographyVariants.P]: ['text-sm'],
-      [ITypographyVariants.H1]: ['text-lg', 'font-bold'],
+      [TypographyVariant.Base]: ['text-base'],
+      [TypographyVariant.Small]: ['text-sm'],
+      [TypographyVariant.Large]: ['text-lg'],
+      [TypographyVariant.ExtraLarge]: ['text-xl'],
+      [TypographyVariant.h1]: ['text-5xl', 'font-semibold'],
+      [TypographyVariant.h2]: ['text-4xl', 'font-semibold'],
+      [TypographyVariant.h3]: ['text-3xl', 'font-semibold'],
+      [TypographyVariant.h4]: ['text-2xl', 'font-medium'],
     },
   },
 
   defaultVariants: {
-    intent: ITypographyVariants.P,
+    intent: TypographyVariant.Base,
   },
 });
-
-export default buttonVariants;
