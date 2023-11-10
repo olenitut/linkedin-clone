@@ -3,7 +3,7 @@ import { ButtonSize, ButtonVariant } from '@/components/ui/button/button-variant
 import { Typography } from '@/components/ui/typography';
 import { TypographyVariant } from '@/components/ui/typography/typography-variants';
 import { Container } from '@/components/ui/layouts';
-import { TextInput } from '@/components/ui/inputs';
+import { CustomInput } from '@/components/ui/inputs';
 
 export default function Home() {
   return (
@@ -71,7 +71,7 @@ export default function Home() {
         </div>
 
         <div className='flex wrap gap-4 m-4'>
-          <TextInput label='First Name' id='first-name' placeholder='Olha Dovbush' className='w-80' />
+          <CustomInput label='First Name' placeholder='Olha Dovbush' className='w-80' />
         </div>
       </main>
     </Container>
