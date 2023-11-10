@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Container>
       <main className='flex flex-col justify-center items-center'>
-        <div className='flex wrap gap-4 m-4'>
+        <div className='flex wrap gap-4 m-20'>
           <Button size={ButtonSize.Large} variant={ButtonVariant.Primary}>
             Large
           </Button>

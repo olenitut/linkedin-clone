@@ -1,13 +1,12 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 import { ButtonSize, ButtonVariant, buttonVariants } from '@/components/ui/button/button-variants';
 
-import { Logo } from './Logo';
+import { Logo } from './components';
 
 export function PublicNavbar() {
   return (
-    <div className='flex h-14 items-center justify-between'>
+    <div className='flex h-16 items-center justify-between'>
       <Logo />
 
       <div className='flex items-center space-x-4'>

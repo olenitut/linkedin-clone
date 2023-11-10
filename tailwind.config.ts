@@ -12,6 +12,24 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        fadeOut: {
+          '0%': { opacity: '1' },
+          '100%': { opacity: '0' },
+        },
+        slideIn: {
+          '0%': { transform: 'translateX(100%)' },
+        },
+      },
+      animation: {
+        fadeIn: 'fadeIn 400ms ease-in',
+        fadeOut: 'fadeOut 400ms ease-out',
+        slideIn: 'slideIn 1440ms cubic-bezier(0.14, 0.78, 0.36, 1)',
+      },
     },
     colors: {
       red: {
@@ -31,10 +49,14 @@ const config: Config = {
         full: '#fff',
         opacity: 'rgba(255,255,255,0.7)',
       },
+      black: {
+        backdrop: 'rgba(0,0,0,0.3)',
+      },
       gray: {
         '150': '#e4e4e7',
         '200': '#e5e7eb',
-        '500': '#7e7476',
+        '500': '#78716c',
+        '600': '#7e7476',
       },
       blue: {
         '500': '#378fe9',
