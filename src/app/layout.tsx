@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
+
+import { Header } from '@/components/ui/layouts';
+
 import './globals.css';
 
 const spaceGrotesk = Space_Grotesk({
@@ -8,24 +11,26 @@ const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
 });
 
+const inter = Space_Grotesk({ subsets: ['latin'] });
+
 export const metadata: Metadata = {
   title: 'WorkWave',
   description: 'Suggesting a wave of professional activity and connections.',
   icons: {
-    icon: '/images/icon.png',
-    apple: '/images/apple-icon.png',
+    icon: '/images/favicons/icon.png',
+    apple: '/images/favicons/apple-icon.png',
     other: [
       {
         rel: 'icon',
-        url: '/images/favicon-16x16.png',
+        url: '/images/favicons/favicon-16x16.png',
       },
       {
         rel: 'android-icon',
-        url: '/images/android-icon.png',
+        url: '/images/favicons/android-icon.png',
       },
       {
         rel: 'android-192-icon',
-        url: '/images/android-192-icon.png',
+        url: '/images/favicons/android-192-icon.png',
       },
     ],
   },
@@ -34,7 +39,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={spaceGrotesk.className}>{children}</body>
+      <body className={inter.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
