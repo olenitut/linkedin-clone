@@ -3,6 +3,7 @@ import { ButtonSize, ButtonVariant } from '@/components/ui/button/button-variant
 import { Typography } from '@/components/ui/typography';
 import { TypographyVariant } from '@/components/ui/typography/typography-variants';
 import { Container } from '@/components/ui/layouts';
+import { CustomInput } from '@/components/ui/inputs';
 
 export default function Home() {
   return (
@@ -67,6 +68,10 @@ export default function Home() {
           <Button variant={ButtonVariant.Circle} id='pencil' className='w-10 h-10' />
           <Button variant={ButtonVariant.Circle} id='up' className='w-10 h-10' />
           <Button variant={ButtonVariant.Circle} id='down' className='w-10 h-10' />
+        </div>
+
+        <div className='flex wrap gap-4 m-4'>
+          <CustomInput label='First Name' placeholder='Olha Dovbush' className='w-80' />
         </div>
       </main>
     </Container>
