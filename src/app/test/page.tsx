@@ -1,52 +1,52 @@
 'use client';
+import { useFormState } from 'react-dom';
+import { toast } from 'react-toastify';
 
-import axios from 'axios';
-import { FormEvent, useRef, useState } from 'react';
+import { signup } from '@/actions/signup';
+import { CustomInput } from '@/components/ui/inputs';
+import { Button } from '@/components/ui/button';
+import { ButtonSize, ButtonVariant } from '@/components/ui/button/button-variants';
+import { getIssues } from '@/lib';
+import { Typography } from '@/components/ui/typography';
+import { TypographyVariant } from '@/components/ui/typography/typography-variants';
+
+const initialState = {
+  issues: null,
+  error: null,
+};
+
+const toastId = 'sign-up-error';
 
 const TestPage = () => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [state, formAction] = useFormState(signup, initialState);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const data = { firstName, lastName, email, password };
+  const signupIssues = getIssues(state);
 
-    const res = await axios.post(`/api/register`, data);
-
-    console.log(res);
+  const notify = () => {
+    toast.error(state.error, { toastId });
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          placeholder='firstName'
-          name='firstName'
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-        />
-        <input
-          placeholder='lastName'
-          name='lastName'
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
-        />
-        <input
-          placeholder='email'
-          name='email'
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          placeholder='password'
+    <div className='mt-10'>
+      <form action={formAction} className='flex flex-col gap-4 w-[400px] mx-auto'>
+        <CustomInput placeholder='First Name' name='firstName' isRequired />
+        <CustomInput placeholder='Last Name' name='lastName' isRequired />
+
+        <CustomInput placeholder='Email' name='email' isRequired error={signupIssues?.email} />
+
+        <CustomInput
+          placeholder='Password'
           name='password'
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          isRequired
+          error={signupIssues?.password}
         />
-        <button>submit</button>
+
+        <Button type='submit' variant={ButtonVariant.Primary} size={ButtonSize.Full}>
+          submit
+        </Button>
       </form>
+
+      {state.error && notify()}
     </div>
   );
 };
