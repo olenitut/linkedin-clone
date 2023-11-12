@@ -16,15 +16,12 @@ const TestPage = () => {
   const [loginPass, setLoginPass] = useState('');
 
   const session = useSession();
-  console.log(session.data?.user);
 
   const handleRegister = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = { firstName, lastName, email, password };
 
-    const res = await axios.post(`/api/register`, data);
-
-    console.log(res);
+    const res = await axios.post(`/api/signup`, data);
   };
 
   const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
