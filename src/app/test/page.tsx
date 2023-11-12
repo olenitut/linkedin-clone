@@ -1,7 +1,8 @@
 'use client';
 
 import axios from 'axios';
-import { FormEvent, useRef, useState } from 'react';
+import { FormEvent, useState } from 'react';
+import { signIn, signOut, useSession } from 'next-auth/react';
 
 const TestPage = () => {
   const [firstName, setFirstName] = useState('');
@@ -9,7 +10,15 @@ const TestPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  //LOGIN
+
+  const [loginEmail, setLoginEmail] = useState('');
+  const [loginPass, setLoginPass] = useState('');
+
+  const session = useSession();
+  console.log(session.data?.user);
+
+  const handleRegister = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = { firstName, lastName, email, password };
 
@@ -18,9 +27,18 @@ const TestPage = () => {
     console.log(res);
   };
 
+  const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    await signIn('credentials', { email: loginEmail, password: loginPass, redirect: false });
+
+    //if errror, we can set it as state and whow in ui
+    //if no errro, we can redirect to the main page
+  };
+
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      {/* REGISTER */}
+      <form onSubmit={handleRegister}>
         <input
           placeholder='firstName'
           name='firstName'
@@ -47,6 +65,28 @@ const TestPage = () => {
         />
         <button>submit</button>
       </form>
+
+      <hr />
+      {/* LOGIN */}
+      <form onSubmit={handleLogin}>
+        <input
+          placeholder='email'
+          value={loginEmail}
+          onChange={(e) => setLoginEmail(e.target.value)}
+        />
+        <input
+          placeholder='password'
+          value={loginPass}
+          onChange={(e) => setLoginPass(e.target.value)}
+        />
+        <button>LOGIN</button>
+      </form>
+
+      <p>{session?.data?.user?.name}</p>
+      <p>{session?.data?.user?.email}</p>
+
+      {/* LOGOUT */}
+      <button onClick={() => signOut()}>LOGOUT</button>
     </div>
   );
 };

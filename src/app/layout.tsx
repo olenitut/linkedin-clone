@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
 
 import { Header } from '@/components/ui/layouts';
+import AuthProvider from '@/providers/AuthProvider';
 
 import './globals.css';
 
@@ -38,11 +39,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en'>
-      <body className={inter.className}>
-        <Header />
-        {children}
-      </body>
-    </html>
+    <AuthProvider>
+      <html lang='en'>
+        <body className={inter.className}>
+          <Header />
+          {children}
+        </body>
+      </html>
+    </AuthProvider>
   );
 }
