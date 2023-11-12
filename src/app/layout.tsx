@@ -3,6 +3,7 @@ import { Space_Grotesk } from 'next/font/google';
 import { ToastContainer } from 'react-toastify';
 
 import { Header } from '@/components/ui/layouts';
+import AuthProvider from '@/providers/AuthProvider';
 
 import './globals.css';
 import 'react-toastify/dist/ReactToastify.min.css';
@@ -40,6 +41,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
+    <AuthProvider>
+
     <html lang='en'>
       <body className={inter.className}>
         <Header />
@@ -47,5 +50,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ToastContainer position='bottom-center' autoClose={1500} />
       </body>
     </html>
-  );
+      </AuthProvider>
+      );
 }

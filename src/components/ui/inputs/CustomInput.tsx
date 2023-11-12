@@ -1,5 +1,5 @@
 'use client';
-import { useId } from 'react';
+import React, { useId } from 'react';
 import { clsx } from 'clsx';
 
 import { TypographyVariant } from '@/components/ui/typography/typography-variants';
@@ -13,6 +13,8 @@ type InputProps = {
   placeholder?: string;
   isRequired?: boolean;
   error?: string;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 export function CustomInput({
@@ -21,6 +23,8 @@ export function CustomInput({
   label,
   className,
   isRequired,
+  value,
+  onChange,
   error = '',
   type = 'text',
   ...delegated
@@ -46,6 +50,8 @@ export function CustomInput({
         className={classes}
         required={isRequired}
         placeholder={placeholder}
+        value={value}
+        onChange={onChange && onChange}
         {...delegated}
       />
       {error && (
