@@ -20,7 +20,7 @@ export async function signup(prevState: any, formData: FormData) {
     });
 
     if (signupData.success) {
-      const { data }: { data: UserRes } = await axios.post(`/api/signup`, signupData);
+      const { data }: { data: UserRes } = await axios.post('/api/signup', signupData.output);
       return data;
     } else {
       return { issues: signupData.issues };
