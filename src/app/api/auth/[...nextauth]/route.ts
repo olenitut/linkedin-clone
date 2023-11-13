@@ -9,9 +9,13 @@ const authOptions = {
   providers: [
     CredentialsProvider({
       name: 'credentials',
-      credentials: {},
+      credentials: {
+        email: { label: 'Email', type: 'text', placeholder: 'john@gmail.com' },
+        password: { label: 'Password', type: 'password' },
+      },
       async authorize(cred) {
-        const { email, password } = cred;
+        const { email, password } = cred!;
+
         try {
           await connectMongoDB();
           const user = await User.findOne({ email });
@@ -21,11 +25,10 @@ const authOptions = {
 
           if (!isPasswordCorrect) return null;
 
-          return { email: user.email, name: user.firstName };
+          return user;
         } catch (err) {
           console.log(err);
         }
-        return user;
       },
     }),
   ],
