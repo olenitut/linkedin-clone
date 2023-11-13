@@ -1,9 +1,14 @@
 {
   "extends": [
     "next/core-web-vitals",
-    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/recommended",
+    "airbnb",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:security/recommended",
+    "plugin:react-hooks/recommended",
     "prettier"
   ],
   "rules": {
