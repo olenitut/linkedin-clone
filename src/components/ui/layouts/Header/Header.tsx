@@ -7,7 +7,7 @@ import { PublicNavbar } from './PublicNavbar';
 import { ProtectedNavbar } from './ProtectedNavbar';
 
 export function Header() {
-  const isSignedIn = true;
+  const isSignedIn = false;
 
   return (
     <nav className='w-full h-16 inset-x-0 top-0 sticky z-30 border-b border-gray-200 bg-white-opacity backdrop-blur-lg transition-all'>

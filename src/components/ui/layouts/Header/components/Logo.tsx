@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import LogoSVG from 'public/images/icons/logo.svg';
+import LogoSVG from 'public/assets/icons/logo.svg';
 
 export function Logo() {
   return (

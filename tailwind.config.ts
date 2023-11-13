@@ -11,6 +11,7 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'signup-pattern': "url('/assets/images/signup-bg.webp')",
       },
       keyframes: {
         fadeIn: {
@@ -36,6 +37,7 @@ const config: Config = {
     },
     colors: {
       red: {
+        '10': '#fff5f5',
         '50': '#fff1f1',
         '100': '#ffdfdf',
         '200': '#ffc5c5',

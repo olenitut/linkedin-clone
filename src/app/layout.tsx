@@ -41,15 +41,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <AuthProvider>
-
     <html lang='en'>
       <body className={inter.className}>
-        <Header />
-        {children}
-        <ToastContainer position='bottom-center' autoClose={1500} />
+        <AuthProvider>
+          <Header />
+          {children}
+          <ToastContainer position='bottom-center' autoClose={1500} />
+        </AuthProvider>
       </body>
     </html>
-      </AuthProvider>
-      );
+  );
 }
