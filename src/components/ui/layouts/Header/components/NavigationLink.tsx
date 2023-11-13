@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -41,15 +42,15 @@ export function NavigationLink({ children, href, id }: NavigationLinkProps) {
     <Link
       href={href}
       className={clsx(
-        'w-full sm:w-auto group flex flex-col items-center justify-center gap-0.5 text-gray-500 hover:text-red-950 transition-colors duration-300 relative h-[40px] sm:h-auto',
+        'group relative flex h-[40px] w-full flex-col items-center justify-center gap-0.5 text-gray-500 transition-colors duration-300 hover:text-red-950 sm:h-auto sm:w-auto',
         { 'active !text-red-950': activeLink }
       )}
     >
       {icons[id]}
-      <span className='text-base sm:text-sm font-medium sm:font-normal'>{children}</span>
+      <span className='text-base font-medium sm:text-sm sm:font-normal'>{children}</span>
       {activeLink && (
         <span
-          className='hidden md:block absolute w-[70px] h-0.5 -bottom-2 bg-red-950 rounded-t-lg animate-fadeIn'
+          className='absolute -bottom-2 hidden h-0.5 w-[70px] animate-fadeIn rounded-t-lg bg-red-950 md:block'
           aria-hidden='true'
         />
       )}

@@ -3,7 +3,7 @@ import { clsx } from 'clsx';
 export function Spinner({ isLoading }: { isLoading: boolean }) {
   return (
     <div
-      className={clsx('fixed z-[9999] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]', {
+      className={clsx('fixed left-[50%] top-[50%] z-[9999] -translate-x-[50%] -translate-y-[50%]', {
         hidden: !isLoading,
       })}
     >
@@ -17,7 +17,7 @@ export function Spinner({ isLoading }: { isLoading: boolean }) {
             strokeLinecap='round'
             strokeLinejoin='round'
             strokeWidth='24'
-          ></line>
+          />
           <line
             x1='195.9'
             y1='60.1'
@@ -26,7 +26,7 @@ export function Spinner({ isLoading }: { isLoading: boolean }) {
             strokeLinecap='round'
             strokeLinejoin='round'
             strokeWidth='24'
-          ></line>
+          />
           <line
             x1='224'
             y1='128'
@@ -35,7 +35,7 @@ export function Spinner({ isLoading }: { isLoading: boolean }) {
             strokeLinecap='round'
             strokeLinejoin='round'
             strokeWidth='24'
-          ></line>
+          />
           <line
             x1='195.9'
             y1='195.9'
@@ -44,7 +44,7 @@ export function Spinner({ isLoading }: { isLoading: boolean }) {
             strokeLinecap='round'
             strokeLinejoin='round'
             strokeWidth='24'
-          ></line>
+          />
           <line
             x1='128'
             y1='224'
@@ -53,7 +53,7 @@ export function Spinner({ isLoading }: { isLoading: boolean }) {
             strokeLinecap='round'
             strokeLinejoin='round'
             strokeWidth='24'
-          ></line>
+          />
           <line
             x1='60.1'
             y1='195.9'
@@ -62,7 +62,7 @@ export function Spinner({ isLoading }: { isLoading: boolean }) {
             strokeLinecap='round'
             strokeLinejoin='round'
             strokeWidth='24'
-          ></line>
+          />
           <line
             x1='32'
             y1='128'
@@ -71,7 +71,7 @@ export function Spinner({ isLoading }: { isLoading: boolean }) {
             strokeLinecap='round'
             strokeLinejoin='round'
             strokeWidth='24'
-          ></line>
+          />
           <line
             x1='60.1'
             y1='60.1'
@@ -80,7 +80,7 @@ export function Spinner({ isLoading }: { isLoading: boolean }) {
             strokeLinecap='round'
             strokeLinejoin='round'
             strokeWidth='24'
-          ></line>
+          />
         </svg>
         <span className='text-4xl font-medium text-gray-300'>Loading...</span>
       </div>

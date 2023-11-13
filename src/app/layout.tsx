@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
 import { ToastContainer } from 'react-toastify';

@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useId } from 'react';
 import { clsx } from 'clsx';
 
@@ -14,7 +15,7 @@ type InputProps = {
   isRequired?: boolean;
   error?: string;
   value?: string;
-  onChange?: () => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 export function CustomInput({
@@ -52,7 +53,7 @@ export function CustomInput({
         required={isRequired}
         placeholder={placeholder}
         value={value}
-        onChange={onChange && onChange}
+        onChange={onChange || (() => {})}
         {...delegated}
       />
       {error && (

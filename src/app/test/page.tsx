@@ -1,4 +1,5 @@
 'use client';
+
 import { useFormState } from 'react-dom';
 import { toast } from 'react-toastify';
 import { FormEvent, useState } from 'react';
@@ -20,7 +21,7 @@ const initialState = {
 
 const toastId = 'sign-up-error';
 
-const TestPage = () => {
+function TestPage() {
   const session = useSession();
 
   const [state, formAction] = useFormState(signup, initialState);
@@ -41,10 +42,10 @@ const TestPage = () => {
 
   return (
     <div className='mt-10'>
-      <Typography variant={TypographyVariant.h2} className='text-center mb-4'>
+      <Typography variant={TypographyVariant.h2} className='mb-4 text-center'>
         Sign Up
       </Typography>
-      <form action={formAction} className='flex flex-col gap-4 w-[400px] mx-auto'>
+      <form action={formAction} className='mx-auto flex w-[400px] flex-col gap-4'>
         <CustomInput placeholder='First Name' name='firstName' isRequired />
         <CustomInput placeholder='Last Name' name='lastName' isRequired />
 
@@ -62,10 +63,10 @@ const TestPage = () => {
         </Button>
       </form>
 
-      <Typography variant={TypographyVariant.h2} as='h3' className='text-center my-8'>
+      <Typography variant={TypographyVariant.h2} as='h3' className='my-8 text-center'>
         Sign In
       </Typography>
-      <form onSubmit={handleLogin} className='flex flex-col gap-4 w-[400px] mx-auto'>
+      <form onSubmit={handleLogin} className='mx-auto flex w-[400px] flex-col gap-4'>
         <CustomInput
           placeholder='Email'
           value={loginEmail}
@@ -89,7 +90,7 @@ const TestPage = () => {
         onClick={() => signOut()}
         variant={ButtonVariant.Secondary}
         size={ButtonSize.Medium}
-        className='w-[150px] mx-auto my-8'
+        className='mx-auto my-8 w-[150px]'
       >
         LOGOUT
       </Button>
@@ -97,5 +98,5 @@ const TestPage = () => {
       {state.error && notify()}
     </div>
   );
-};
+}
 export default TestPage;

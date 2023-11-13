@@ -22,9 +22,8 @@ export async function signup(prevState: any, formData: FormData) {
     if (signupData.success) {
       const { data }: { data: UserRes } = await axios.post('/api/signup', signupData.output);
       return { success: data.message };
-    } else {
-      return { issues: signupData.issues };
     }
+    return { issues: signupData.issues };
   } catch (err: any) {
     let title;
     if (err.response) {

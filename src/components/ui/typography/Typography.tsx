@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { TypographyVariant, typographyVariants } from './typography-variants';
 
 type TypographyProps = {
