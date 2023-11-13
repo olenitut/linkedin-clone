@@ -6,11 +6,12 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 
 import { signup } from '@/actions/signup';
 import { CustomInput } from '@/components/ui/inputs';
-import { Button } from '@/components/ui/button';
-import { ButtonSize, ButtonVariant } from '@/components/ui/button/button-variants';
+import { ButtonSize, ButtonVariant } from '@/components/ui/buttons/main/button-variants';
 import { getIssues } from '@/lib';
 import { Typography } from '@/components/ui/typography';
 import { TypographyVariant } from '@/components/ui/typography/typography-variants';
+
+import { Button } from '../../components/ui/buttons';
 
 const initialState = {
   issues: null,

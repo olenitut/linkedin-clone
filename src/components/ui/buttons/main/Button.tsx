@@ -1,14 +1,14 @@
 import React from 'react';
 
 import { ButtonVariant, ButtonSize, buttonVariants } from './button-variants';
-import { icons } from './icons';
+import { IconName, icons } from '../extra/icons';
 
-type Props = {
+export type ButtonProps = {
   variant?: ButtonVariant;
   size?: ButtonSize;
   children?: string | React.ReactNode;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  id?: string;
+  iconName?: IconName;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
 };
@@ -18,15 +18,15 @@ export function Button({
   size,
   onClick,
   children,
-  id,
   className,
+  iconName,
   type = 'button',
-}: Props) {
+}: ButtonProps) {
   const classes = buttonVariants({ intent: variant, size, className });
 
   return (
     <button className={classes} onClick={onClick} type={type}>
-      {id && icons[id]}
+      {iconName && icons[iconName]}
       {children}
     </button>
   );

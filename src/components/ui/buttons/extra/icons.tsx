@@ -45,3 +45,23 @@ export const icons: Icon = {
   up: <ChevronUpIcon className={'h-5 w-5 text-red-950'} />,
   down: <ChevronDownIcon className={'h-5 w-5 text-red-950'} />,
 };
+
+export enum IconName {
+  share = 'share',
+  job = 'job',
+  article = 'article',
+  like = 'like',
+  comment = 'comment',
+  repost = 'repost',
+  send = 'send',
+  follow = 'follow',
+  control = 'control',
+  close = 'close',
+  plus = 'plus',
+  smile = 'smile',
+  star = 'star',
+  controlMini = 'controlMini',
+  pencil = 'pencil',
+  up = 'up',
+  down = 'down',
+}

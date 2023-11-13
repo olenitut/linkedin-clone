@@ -1,6 +1,10 @@
 import Link from 'next/link';
 
-import { ButtonSize, ButtonVariant, buttonVariants } from '@/components/ui/button/button-variants';
+import {
+  ButtonSize,
+  ButtonVariant,
+  buttonVariants,
+} from '@/components/ui/buttons/main/button-variants';
 
 export function SignOutLink() {
   return (

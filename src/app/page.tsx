@@ -1,9 +1,7 @@
-import { Button } from '@/components/ui/button';
-import { ButtonSize, ButtonVariant } from '@/components/ui/button/button-variants';
-import { Typography } from '@/components/ui/typography';
-import { TypographyVariant } from '@/components/ui/typography/typography-variants';
+import { ButtonSize, ButtonVariant } from '@/components/ui/buttons/main/button-variants';
 import { Container } from '@/components/ui/layouts';
-import { CustomInput } from '@/components/ui/inputs';
+
+import { Button, IconButton, IconName } from '../components/ui/buttons';
 
 export default function Home() {
   return (
@@ -25,53 +23,57 @@ export default function Home() {
         </div>
 
         <div className='flex wrap gap-4 m-4'>
-          <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} id='share'>
+          <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} iconName={IconName.share}>
             Share
           </Button>
-          <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} id='job'>
+          <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} iconName={IconName.job}>
             Job
           </Button>
-          <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} id='article'>
+          <Button
+            size={ButtonSize.Medium}
+            variant={ButtonVariant.Ghost}
+            iconName={IconName.article}
+          >
             Write article
           </Button>
         </div>
         <div className='flex wrap gap-4 m-4'>
-          <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} id='like'>
+          <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} iconName={IconName.like}>
             Like
           </Button>
-          <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} id='comment'>
+          <Button
+            size={ButtonSize.Medium}
+            variant={ButtonVariant.Ghost}
+            iconName={IconName.comment}
+          >
             Comment
           </Button>
-          <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} id='repost'>
+          <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} iconName={IconName.repost}>
             Repost
           </Button>
-          <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} id='send'>
+          <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} iconName={IconName.send}>
             Send
           </Button>
           <Button
             size={ButtonSize.Medium}
             variant={ButtonVariant.Ghost}
-            id='follow'
+            iconName={IconName.follow}
             className='!text-red-700'
           >
             Follow
           </Button>
         </div>
         <div className='flex wrap gap-4 m-4'>
-          <Button variant={ButtonVariant.Circle} id='control' />
-          <Button variant={ButtonVariant.Circle} id='close' />
-          <Button variant={ButtonVariant.Circle} id='plus' />
-          <Button variant={ButtonVariant.Circle} id='smile' />
-          <Button variant={ButtonVariant.Circle} id='star' />
+          <IconButton iconName={IconName.control} />
+          <IconButton iconName={IconName.close} />
+          <IconButton iconName={IconName.plus} />
+          <IconButton iconName={IconName.smile} />
+          <IconButton iconName={IconName.star} />
 
-          <Button variant={ButtonVariant.Circle} id='controlMini' className='w-10 h-10' />
-          <Button variant={ButtonVariant.Circle} id='pencil' className='w-10 h-10' />
-          <Button variant={ButtonVariant.Circle} id='up' className='w-10 h-10' />
-          <Button variant={ButtonVariant.Circle} id='down' className='w-10 h-10' />
-        </div>
-
-        <div className='flex wrap gap-4 m-4'>
-          <CustomInput label='First Name' placeholder='Olha Dovbush' className='w-80' />
+          <IconButton iconName={IconName.controlMini} height='mini' />
+          <IconButton iconName={IconName.pencil} height='mini' />
+          <IconButton iconName={IconName.up} height='mini' />
+          <IconButton iconName={IconName.down} height='mini' />
         </div>
       </main>
     </Container>

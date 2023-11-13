@@ -3,9 +3,9 @@ import { Dialog } from '@headlessui/react';
 import { Fragment } from 'react';
 import { XCircleIcon } from '@heroicons/react/24/outline';
 
-import { Button } from '@/components/ui/button';
-import { ButtonVariant } from '@/components/ui/button/button-variants';
+import { ButtonVariant } from '@/components/ui/buttons/main/button-variants';
 
+import { Button } from '../../../buttons';
 import { SignOutLink } from './SignOutLink';
 import { LinksList } from './LinksList';
 
