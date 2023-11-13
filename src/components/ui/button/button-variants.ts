@@ -8,6 +8,7 @@ export enum ButtonVariant {
 }
 
 export enum ButtonSize {
+  Full = 'full',
   Large = 'large',
   Medium = 'medium',
   Small = 'small',
@@ -67,6 +68,7 @@ export const buttonVariants = cva(
         [ButtonSize.Small]: ['text-sm', 'p-2', 'rounded-sm', 'h-10'],
         [ButtonSize.Medium]: ['text-base', 'py-2', 'px-3', 'h-12'],
         [ButtonSize.Large]: ['text-base', 'py-2', 'px-7', 'h-14', 'uppercase'],
+        [ButtonSize.Full]: ['!w-full', 'uppercase', 'h-12'],
       },
     },
     compoundVariants: [

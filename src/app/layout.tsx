@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
+import { ToastContainer } from 'react-toastify';
 
 import { Header } from '@/components/ui/layouts';
 import AuthProvider from '@/providers/AuthProvider';
 
 import './globals.css';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -40,12 +42,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <AuthProvider>
-      <html lang='en'>
-        <body className={inter.className}>
-          <Header />
-          {children}
-        </body>
-      </html>
-    </AuthProvider>
-  );
+
+    <html lang='en'>
+      <body className={inter.className}>
+        <Header />
+        {children}
+        <ToastContainer position='bottom-center' autoClose={1500} />
+      </body>
+    </html>
+      </AuthProvider>
+      );
 }

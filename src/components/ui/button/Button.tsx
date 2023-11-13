@@ -10,13 +10,22 @@ type Props = {
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   id?: string;
   className?: string;
+  type?: 'button' | 'submit' | 'reset';
 };
 
-export function Button({ variant, size, onClick, children, id, className }: Props) {
+export function Button({
+  variant,
+  size,
+  onClick,
+  children,
+  id,
+  className,
+  type = 'button',
+}: Props) {
   const classes = buttonVariants({ intent: variant, size, className });
 
   return (
-    <button className={classes} onClick={onClick}>
+    <button className={classes} onClick={onClick} type={type}>
       {id && icons[id]}
       {children}
     </button>
