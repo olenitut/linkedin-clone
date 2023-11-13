@@ -8,6 +8,7 @@
         "pathGroupsExcludedImportTypes": ["internal", "react"],
         "newlines-between": "always"
       }
-    ]
+    ],
+    "no-unused-vars": 1
   }
 }
