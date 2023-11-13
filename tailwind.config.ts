@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        modal:
+          'rgb(0 0 0 / 0%) 0 0 0 0, rgb(0 0 0 / 0%) 0 0 0 0, rgb(0 0 0 / 10%) 0 10px 15px -3px, rgb(0 0 0 / 10%) 0 4px 6px -4px',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
@@ -52,10 +56,10 @@ const config: Config = {
       },
       white: {
         full: '#fff',
-        opacity: 'rgba(255,255,255,0.7)',
+        opacity: 'rgba(255 255 255 / 80%)',
       },
       black: {
-        backdrop: 'rgba(0,0,0,0.3)',
+        backdrop: 'rgba(0 0 0 / 30%)',
       },
       gray: {
         '150': '#e4e4e7',

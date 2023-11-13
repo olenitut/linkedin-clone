@@ -2,6 +2,7 @@
 import { useFormState, useFormStatus } from 'react-dom';
 import Link from 'next/link';
 import { toast } from 'react-toastify';
+import { useState } from 'react';
 
 import { Container } from '@/components/ui/layouts';
 import { Typography, TypographyVariant } from '@/components/ui/typography';
@@ -10,6 +11,7 @@ import { Button, ButtonSize, ButtonVariant } from '@/components/ui/buttons';
 import { signup } from '@/actions/signup';
 import { getIssues } from '@/lib';
 import { Spinner } from '@/components/ui/spinner';
+import { Modal } from '@/components/ui/modals';
 
 const initialState = {
   issues: null,
@@ -22,6 +24,7 @@ const toastId = 'sign-up-error';
 export default function SignUp() {
   const [state, formAction] = useFormState(signup, initialState);
   const { pending } = useFormStatus();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   console.log(state);
 
@@ -81,6 +84,18 @@ export default function SignUp() {
       {state.error && notify()}
 
       <Spinner isLoading={pending} />
+      <Modal
+        isOpen={isModalOpen}
+        handleClose={() => setIsModalOpen(false)}
+        title='Welcome to Your Professional Network!'
+        description="Congratulations! Your account on WorkWave has been successfully created. You're now part of a global community of professionals."
+      >
+        <Link href='/signin'>
+          <Button variant={ButtonVariant.Primary} size={ButtonSize.Small}>
+            Sign In
+          </Button>
+        </Link>
+      </Modal>
     </div>
   );
 }

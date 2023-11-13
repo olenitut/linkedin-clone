@@ -63,6 +63,7 @@ export const buttonVariants = cva(
           'rounded-full',
           'h-12',
           'w-12',
+          'focus:outline-red-100',
         ],
         [ButtonVariant.CircleMini]: [
           'bg-transparent',
@@ -75,7 +76,7 @@ export const buttonVariants = cva(
         ],
       },
       size: {
-        [ButtonSize.Small]: ['text-sm', 'p-2', 'rounded-sm', 'h-10'],
+        [ButtonSize.Small]: ['text-sm', 'px-5', 'rounded-sm', 'h-10'],
         [ButtonSize.Medium]: ['text-base', 'py-2', 'px-3', 'h-12'],
         [ButtonSize.Large]: ['text-base', 'py-2', 'px-7', 'h-14', 'uppercase'],
         [ButtonSize.Full]: ['!w-full', 'uppercase', 'h-12'],
