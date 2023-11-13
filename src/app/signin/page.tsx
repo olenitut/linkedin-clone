@@ -11,7 +11,7 @@ export default function SignIn() {
 
         <div className='flex gap-2 items-center justify-center'>
           <Typography variant={TypographyVariant.Base}>Don&apos;t have an account?</Typography>
-          <Link href='signup' className='text-red-950'>
+          <Link href='signup' className='text-red-900'>
             Sign Up
           </Link>
         </div>

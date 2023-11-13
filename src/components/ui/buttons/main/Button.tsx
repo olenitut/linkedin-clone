@@ -11,6 +11,7 @@ export type ButtonProps = {
   iconName?: IconName;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
+  isDisabled?: boolean;
 };
 
 export function Button({
@@ -21,11 +22,13 @@ export function Button({
   className,
   iconName,
   type = 'button',
+  isDisabled = false,
+  ...delegated
 }: ButtonProps) {
   const classes = buttonVariants({ intent: variant, size, className });
 
   return (
-    <button className={classes} onClick={onClick} type={type}>
+    <button className={classes} onClick={onClick} type={type} disabled={isDisabled} {...delegated}>
       {iconName && icons[iconName]}
       {children}
     </button>
