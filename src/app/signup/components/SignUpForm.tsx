@@ -9,7 +9,6 @@ import { Button, ButtonSize, ButtonVariant } from '@/components/ui/buttons';
 import { Spinner } from '@/components/ui/spinner';
 import { signup } from '@/actions/signup';
 import { getIssues } from '@/lib';
-import { Modal } from '@/components/ui/modals';
 import { SuccessModal } from '@/app/signup/components/SuccessModal';
 
 const initialState = {
@@ -42,7 +41,7 @@ export function SignUpForm() {
 
   return (
     <>
-      <form action={formAction} className='flex flex-col gap-7 w-full'>
+      <form action={formAction} className='flex w-full flex-col gap-7'>
         <CustomInput placeholder='First Name' name='firstName' isRequired />
         <CustomInput placeholder='Last Name' name='lastName' isRequired />
 
@@ -56,13 +55,13 @@ export function SignUpForm() {
           error={signupIssues?.password}
         />
 
-        <div className='flex gap-2 items-center justify-center'>
+        <div className='flex items-center justify-center gap-2'>
           <Typography variant={TypographyVariant.Small} className='opacity-70'>
             Already a member?
           </Typography>
           <Link
             href='/signin'
-            className='hover:text-red-700 text-red-900 transition-colors delay-150'
+            className='text-red-900 transition-colors delay-150 hover:text-red-700'
           >
             <Typography variant={TypographyVariant.Small}>Sign In</Typography>
           </Link>
@@ -74,7 +73,7 @@ export function SignUpForm() {
           type='submit'
           variant={ButtonVariant.Primary}
           size={ButtonSize.Full}
-          className='tracking-wide disabled:opacity-50 disabled:cursor-default'
+          className='tracking-wide disabled:cursor-default disabled:opacity-50'
         >
           Register
         </Button>

@@ -1,4 +1,4 @@
-import { email, minLength, object, parse, string, safeParse } from 'valibot';
+import { email, minLength, object, string, safeParse } from 'valibot';
 import axios from 'axios';
 
 import { UserRes } from '@/types/user';

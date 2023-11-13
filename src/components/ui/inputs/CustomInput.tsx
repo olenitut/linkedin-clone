@@ -14,7 +14,7 @@ type InputProps = {
   isRequired?: boolean;
   error?: string;
   value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: () => void;
 };
 
 export function CustomInput({
@@ -38,9 +38,9 @@ export function CustomInput({
   const inputId = useId();
 
   return (
-    <div className='w-full relative'>
+    <div className='relative w-full'>
       {label && (
-        <label htmlFor={inputId} className='text-sm text-red-950 block mb-0.5 opacity-60'>
+        <label htmlFor={inputId} className='mb-0.5 block text-sm text-red-950 opacity-60'>
           {label}
         </label>
       )}
@@ -56,7 +56,7 @@ export function CustomInput({
         {...delegated}
       />
       {error && (
-        <Typography variant={TypographyVariant.Error} className='-bottom-[18px] right-0 absolute'>
+        <Typography variant={TypographyVariant.Error} className='absolute -bottom-[18px] right-0'>
           {error}
         </Typography>
       )}

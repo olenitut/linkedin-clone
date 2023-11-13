@@ -14,8 +14,6 @@ const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
 });
 
-const inter = Space_Grotesk({ subsets: ['latin'] });
-
 export const metadata: Metadata = {
   title: 'WorkWave',
   description: 'Suggesting a wave of professional activity and connections.',
@@ -42,7 +40,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={spaceGrotesk.className}>
         <AuthProvider>
           <Header />
           {children}

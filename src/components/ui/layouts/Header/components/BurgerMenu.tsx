@@ -3,9 +3,6 @@ import { Dialog } from '@headlessui/react';
 import { Fragment } from 'react';
 import { XCircleIcon } from '@heroicons/react/24/outline';
 
-import { ButtonVariant } from '@/components/ui/buttons/main/button-variants';
-
-import { Button } from '../../../buttons';
 import { SignOutLink } from './SignOutLink';
 import { LinksList } from './LinksList';
 
@@ -20,21 +17,21 @@ export function BurgerMenu({ isOpen, onClose }: BurgerMenuProps) {
       <Dialog
         open={isOpen}
         onClose={onClose}
-        className='sm:hidden z-30 py-2 px-4 fixed inset-0 flex w-screen items-center justify-start flex-col animate-fadeIn animate-slideIn'
+        className='fixed inset-0 z-30 flex w-screen animate-fadeIn animate-slideIn flex-col items-center justify-start px-4 py-2 sm:hidden'
       >
         <div
-          className='inset-0 absolute bg-white-full backdrop-blur-sm'
+          className='absolute inset-0 bg-white-full backdrop-blur-sm'
           aria-hidden='true'
           onClick={onClose}
         />
-        <button className='!self-end relative grid place-content-center'>
+        <button className='relative grid place-content-center !self-end'>
           <XCircleIcon className='w-12 text-red-950' />
         </button>
 
-        <div className='flex flex-col gap-4 items-center relative pt-5'>
+        <div className='relative flex flex-col items-center gap-4 pt-5'>
           <LinksList />
         </div>
-        <Dialog.Panel className='flex items-center justify-center mt-6 relative bo'>
+        <Dialog.Panel className='bo relative mt-6 flex items-center justify-center'>
           <SignOutLink />
         </Dialog.Panel>
       </Dialog>

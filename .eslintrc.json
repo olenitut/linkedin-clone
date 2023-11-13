@@ -1,14 +1,22 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:import/recommended", "prettier"],
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "prettier"
+  ],
   "rules": {
     "import/order": [
       "error",
       {
-        "groups": [["builtin","external"], "internal", ["sibling", "parent"], "index"],
+        "groups": [["builtin", "external"], "internal", ["sibling", "parent"], "index"],
         "pathGroupsExcludedImportTypes": ["internal", "react"],
         "newlines-between": "always"
       }
     ],
-    "no-unused-vars": 1
-  }
+    "@typescript-eslint/no-explicit-any": 0
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["import", "@typescript-eslint", "prettier"]
 }

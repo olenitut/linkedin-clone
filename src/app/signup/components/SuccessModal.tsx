@@ -5,7 +5,7 @@ import { Button, ButtonSize, ButtonVariant } from '@/components/ui/buttons';
 
 type SuccessModalProps = {
   isModalOpen: boolean;
-  setIsModalOpen: (v: boolean) => void;
+  setIsModalOpen: any;
 };
 
 export function SuccessModal({ isModalOpen, setIsModalOpen }: SuccessModalProps) {
