@@ -10,9 +10,9 @@ export function Logo() {
         priority
         src={LogoSVG}
         alt='Logo'
-        height={15}
+        height={21}
         width={125}
-        style={{ height: 15, width: 125 }}
+        style={{ height: 21, width: 125 }}
       />
     </Link>
   );

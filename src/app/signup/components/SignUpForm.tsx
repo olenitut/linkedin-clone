@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { useFormState, useFormStatus } from 'react-dom';
 import { useEffect, useState } from 'react';
