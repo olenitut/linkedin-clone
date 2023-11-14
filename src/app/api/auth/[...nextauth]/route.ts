@@ -1,11 +1,12 @@
 import NextAuth from 'next-auth/next';
+import type { NextAuthOptions } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import bcrypt from 'bcryptjs';
 
 import { connectMongoDB } from '@/lib';
 import User from '@/models/userSchema';
 
-const authOptions = {
+const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
       name: 'credentials',
@@ -28,18 +29,17 @@ const authOptions = {
           return user;
         } catch (err) {
           console.log(err);
-          return err;
+          return null;
         }
       },
     }),
   ],
-  seesion: {
+  session: {
     strategy: 'jwt',
   },
   secret: process.env.NEXTAUTH_SECRET,
   pages: {
-    // IMPORTSNT change this to the actual route of sign in
-    signIn: '/test',
+    signIn: '/signin',
   },
 };
 

@@ -31,7 +31,7 @@ export function CustomInput({
   ...delegated
 }: InputProps) {
   const classes = clsx(
-    'px-4 py-3 bg-red-50 rounded shadow-red-900 placeholder:text-red-950 placeholder:opacity-60 focus:outline-none focus:ring-2 focus:ring-red-200 ring-offset-1 text-red-950 w-full border-[1.5px] border-transparent',
+    'px-4 py-3 bg-red-50 rounded shadow-red-900 placeholder:text-red-950 placeholder:opacity-60 focus:outline-none focus:ring-2 focus:ring-red-200 ring-offset-1 text-red-950 w-full border-[1.5px] border-[transparent]',
     { 'border-red-500': error },
     className
   );

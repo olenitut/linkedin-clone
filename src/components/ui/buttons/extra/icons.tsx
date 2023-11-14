@@ -5,6 +5,7 @@ import {
   PhotoIcon,
   PlusIcon,
   XMarkIcon,
+  ArrowLeftIcon,
 } from '@heroicons/react/24/solid';
 import {
   HandThumbUpIcon,
@@ -44,6 +45,7 @@ export const icons: Icon = {
   pencil: <PencilSquareIcon className='h-5 w-5 text-red-950' />,
   up: <ChevronUpIcon className='h-5 w-5 text-red-950' />,
   down: <ChevronDownIcon className='h-5 w-5 text-red-950' />,
+  left: <ArrowLeftIcon className='h-5 w-5 text-red-950' />,
 };
 
 export enum IconName {
@@ -64,4 +66,5 @@ export enum IconName {
   pencil = 'pencil',
   up = 'up',
   down = 'down',
+  left = 'left',
 }
