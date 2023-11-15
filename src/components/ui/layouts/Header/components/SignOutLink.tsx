@@ -1,21 +1,21 @@
-import Link from 'next/link';
+import { signOut } from 'next-auth/react';
 
 import {
   ButtonSize,
   ButtonVariant,
   buttonVariants,
 } from '@/components/ui/buttons/main/button-variants';
+import { Button } from '@/components/ui/buttons';
 
 export function SignOutLink() {
   return (
-    <Link
-      href='/'
-      className={buttonVariants({
-        intent: ButtonVariant.Ghost,
-        size: ButtonSize.Medium,
-      })}
+    <Button
+      size={ButtonSize.Medium}
+      variant={ButtonVariant.Ghost}
+      onClick={() => signOut({ callbackUrl: '/signin' })}
+      className='font-normal text-gray-500 sm:font-medium sm:text-red-950'
     >
-      <span className='font-normal text-gray-500 sm:font-medium sm:text-red-950'>Sign Out</span>
-    </Link>
+      Sign Out
+    </Button>
   );
 }

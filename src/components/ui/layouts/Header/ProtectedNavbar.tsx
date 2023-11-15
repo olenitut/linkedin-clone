@@ -18,7 +18,11 @@ export function ProtectedNavbar() {
         <SignOutLink />
       </div>
 
-      <button onClick={() => setIsBurgerOpen((prevState) => !prevState)} type='button'>
+      <button
+        onClick={() => setIsBurgerOpen((prevState) => !prevState)}
+        type='button'
+        className='sm:hidden'
+      >
         <Bars2Icon className='w-10 sm:hidden' />
       </button>
 

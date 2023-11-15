@@ -16,6 +16,8 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'signup-pattern': "url('/assets/images/signup-bg.webp')",
+        'signin-pattern': "url('/assets/images/signin-bg.webp')",
+        'after-login': "url('/assets/images/after-login.gif')",
       },
       keyframes: {
         fadeIn: {
@@ -59,7 +61,7 @@ const config: Config = {
         opacity: 'rgba(255 255 255 / 80%)',
       },
       black: {
-        backdrop: 'rgba(0 0 0 / 30%)',
+        backdrop: 'rgba(0 0 0 / 40%)',
       },
       gray: {
         '150': '#e4e4e7',

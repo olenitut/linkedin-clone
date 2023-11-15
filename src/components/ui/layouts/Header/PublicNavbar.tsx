@@ -19,6 +19,7 @@ export function PublicNavbar() {
           className={buttonVariants({
             intent: ButtonVariant.Ghost,
             size: ButtonSize.Medium,
+            className: 'text-lg',
           })}
         >
           Sign In
