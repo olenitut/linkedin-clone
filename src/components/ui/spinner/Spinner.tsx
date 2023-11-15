@@ -1,6 +1,6 @@
 import { clsx } from 'clsx';
 
-export function Spinner({ isLoading }: { isLoading: boolean }) {
+export function Spinner({ isLoading = true }: { isLoading?: boolean }) {
   return (
     <div
       className={clsx('fixed left-[50%] top-[50%] z-[9999] -translate-x-[50%] -translate-y-[50%]', {
@@ -8,7 +8,7 @@ export function Spinner({ isLoading }: { isLoading: boolean }) {
       })}
     >
       <div aria-label='Loading...' role='status' className='flex items-center space-x-2'>
-        <svg className='h-20 w-20 animate-spin stroke-gray-300' viewBox='0 0 256 256'>
+        <svg className='h-20 w-20 animate-spin stroke-red-400' viewBox='0 0 256 256'>
           <line
             x1='128'
             y1='32'
@@ -82,7 +82,7 @@ export function Spinner({ isLoading }: { isLoading: boolean }) {
             strokeWidth='24'
           />
         </svg>
-        <span className='text-4xl font-medium text-gray-300'>Loading...</span>
+        <span className='text-4xl font-medium text-red-400'>Loading...</span>
       </div>
     </div>
   );

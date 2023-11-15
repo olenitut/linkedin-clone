@@ -77,8 +77,16 @@ export const buttonVariants = cva(
       },
       size: {
         [ButtonSize.Small]: ['text-sm', 'px-5', 'rounded-sm', 'h-10'],
-        [ButtonSize.Medium]: ['text-base', 'py-2', 'px-3', 'h-12'],
-        [ButtonSize.Large]: ['text-base', 'py-2', 'px-7', 'h-14', 'uppercase'],
+        [ButtonSize.Medium]: ['text-base', 'py-2', 'px-3', 'h-11'],
+        [ButtonSize.Large]: [
+          'text-sm',
+          'py-2',
+          'px-4',
+          'sm:px-5',
+          'h-10',
+          'sm:h-[50px]',
+          'uppercase',
+        ],
         [ButtonSize.Full]: ['!w-full', 'uppercase', 'h-12'],
       },
     },
