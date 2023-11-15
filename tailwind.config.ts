@@ -31,11 +31,17 @@ const config: Config = {
         slideIn: {
           '0%': { transform: 'translateX(100%)' },
         },
+        afterLogin: {
+          '0%': { opacity: '1' },
+          '75%': { opacity: '1' },
+          '100%': { opacity: '0' },
+        },
       },
       animation: {
         fadeIn: 'fadeIn 400ms ease-in',
         fadeOut: 'fadeOut 400ms ease-out',
         slideIn: 'slideIn 1440ms cubic-bezier(0.14, 0.78, 0.36, 1)',
+        afterLogin: 'afterLogin 2500ms',
       },
     },
     fontFamily: {

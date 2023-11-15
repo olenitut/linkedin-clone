@@ -2,10 +2,16 @@
 
 import ReactDOM from 'react-dom/client';
 
+import { Typography, TypographyVariant } from '@/components/ui/typography';
+
 function AfterLoginAnimation() {
   return (
-    <div className='absolute inset-0 z-[9999] h-[100vh] w-[100vw] bg-[black]'>
-      <div className='absolute left-[50%] top-[50%] h-[300px] w-[300px] -translate-x-[50%] -translate-y-[50%] bg-after-login bg-contain bg-center bg-no-repeat' />
+    <div className='absolute inset-0 z-[9999] h-[100vh] w-[100vw] animate-afterLogin bg-white-full'>
+      <div className='absolute left-[50%] top-[50%] h-[200px] w-[400px] -translate-x-[50%] -translate-y-[50%] bg-after-login bg-[length:60px] bg-center bg-no-repeat'>
+        <Typography variant={TypographyVariant.h3} className='text-center text-red-600'>
+          Welcome to WorkWave!
+        </Typography>
+      </div>
     </div>
   );
 }
