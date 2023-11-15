@@ -19,20 +19,20 @@ export const metadata: Metadata = {
   title: 'WorkWave',
   description: 'Suggesting a wave of professional activity and connections.',
   icons: {
-    icon: '/images/favicons/icon.png',
-    apple: '/images/favicons/apple-icon.png',
+    icon: '/assets/favicons/icon.png',
+    apple: '/assets/favicons/apple-icon.png',
     other: [
       {
         rel: 'icon',
-        url: '/images/favicons/favicon-16x16.png',
+        url: '/assets/favicons/favicon-16x16.png',
       },
       {
         rel: 'android-icon',
-        url: '/images/favicons/android-icon.png',
+        url: '/assets/favicons/android-icon.png',
       },
       {
         rel: 'android-192-icon',
-        url: '/images/favicons/android-192-icon.png',
+        url: '/assets/favicons/android-192-icon.png',
       },
     ],
   },
