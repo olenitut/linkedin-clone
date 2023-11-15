@@ -17,6 +17,7 @@ const config: Config = {
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'signup-pattern': "url('/assets/images/signup-bg.webp')",
         'signin-pattern': "url('/assets/images/signin-bg.webp')",
+        'after-login': "url('/assets/images/after-login.gif')",
       },
       keyframes: {
         fadeIn: {

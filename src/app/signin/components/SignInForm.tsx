@@ -10,14 +10,18 @@ import { CustomInput } from '@/components/ui/inputs';
 import { Typography, TypographyVariant } from '@/components/ui/typography';
 import { Button, ButtonSize, ButtonVariant } from '@/components/ui/buttons';
 
+import { animate } from './AfterLoginAnimation';
+
 export function SignInForm() {
   const router = useRouter();
 
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPass, setLoginPass] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     const signinResponse = await signIn('credentials', {
       email: loginEmail,
       password: loginPass,
@@ -31,9 +35,11 @@ export function SignInForm() {
       );
     }
 
+    setLoading(true);
+
     if (signinResponse?.url) {
+      animate();
       router.push(signinResponse.url);
-      toast.success('You are successfully signed in.');
     }
   };
 
