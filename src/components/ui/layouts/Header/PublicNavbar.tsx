@@ -15,7 +15,7 @@ export function PublicNavbar() {
 
       <div className='flex items-center space-x-4'>
         <Link
-          href='/auth/signin'
+          href='/signin'
           className={buttonVariants({
             intent: ButtonVariant.Ghost,
             size: ButtonSize.Medium,

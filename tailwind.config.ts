@@ -8,9 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        modal:
+          'rgb(0 0 0 / 0%) 0 0 0 0, rgb(0 0 0 / 0%) 0 0 0 0, rgb(0 0 0 / 10%) 0 10px 15px -3px, rgb(0 0 0 / 10%) 0 4px 6px -4px',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'signup-pattern': "url('/assets/images/signup-bg.webp')",
       },
       keyframes: {
         fadeIn: {
@@ -36,6 +41,7 @@ const config: Config = {
     },
     colors: {
       red: {
+        '10': '#fff5f5',
         '50': '#fff1f1',
         '100': '#ffdfdf',
         '200': '#ffc5c5',
@@ -50,19 +56,20 @@ const config: Config = {
       },
       white: {
         full: '#fff',
-        opacity: 'rgba(255,255,255,0.7)',
+        opacity: 'rgba(255 255 255 / 80%)',
       },
       black: {
-        backdrop: 'rgba(0,0,0,0.3)',
+        backdrop: 'rgba(0 0 0 / 30%)',
       },
       gray: {
         '150': '#e4e4e7',
         '200': '#e5e7eb',
+        '300': '#8893c7',
         '500': '#78716c',
         '600': '#7e7476',
       },
       blue: {
-        '500': '#378fe9',
+        '500': '#4794e3',
       },
       purple: {
         '500': '#a871ea',

@@ -3,7 +3,6 @@ import bcrypt from 'bcryptjs';
 
 import { connectMongoDB } from '@/lib/mongodb';
 import User from '@/models/userSchema';
-import { EMAIL_REGEX, PASSWORD_REGEX } from '@/constants';
 
 export async function POST(req: Request) {
   try {

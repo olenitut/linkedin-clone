@@ -19,7 +19,7 @@ export const typographyVariants = cva('font-sans', {
       [TypographyVariant.Small]: ['text-sm'],
       [TypographyVariant.Large]: ['text-lg'],
       [TypographyVariant.ExtraLarge]: ['text-xl'],
-      [TypographyVariant.Error]: ['text-xs', 'text-right', 'text-red-600'],
+      [TypographyVariant.Error]: ['text-[11px]', 'text-red-600'],
       [TypographyVariant.h1]: ['text-5xl', 'font-semibold'],
       [TypographyVariant.h2]: ['text-4xl', 'font-semibold'],
       [TypographyVariant.h3]: ['text-3xl', 'font-semibold'],

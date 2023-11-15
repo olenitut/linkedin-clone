@@ -15,7 +15,7 @@ export function SignOutLink() {
         size: ButtonSize.Medium,
       })}
     >
-      <span className='text-gray-500 sm:text-red-950 font-normal sm:font-medium'>Sign Out</span>
+      <span className='font-normal text-gray-500 sm:font-medium sm:text-red-950'>Sign Out</span>
     </Link>
   );
 }

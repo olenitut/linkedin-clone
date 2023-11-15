@@ -6,8 +6,8 @@ import { Button, IconButton, IconName } from '../components/ui/buttons';
 export default function Home() {
   return (
     <Container>
-      <main className='flex flex-col justify-center items-center'>
-        <div className='flex wrap gap-4 m-20'>
+      <main className='flex flex-col items-center justify-center'>
+        <div className='wrap m-20 flex gap-4'>
           <Button size={ButtonSize.Large} variant={ButtonVariant.Primary}>
             Large
           </Button>
@@ -22,7 +22,7 @@ export default function Home() {
           </Button>
         </div>
 
-        <div className='flex wrap gap-4 m-4'>
+        <div className='wrap m-4 flex gap-4'>
           <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} iconName={IconName.share}>
             Share
           </Button>
@@ -37,7 +37,7 @@ export default function Home() {
             Write article
           </Button>
         </div>
-        <div className='flex wrap gap-4 m-4'>
+        <div className='wrap m-4 flex gap-4'>
           <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} iconName={IconName.like}>
             Like
           </Button>
@@ -63,7 +63,7 @@ export default function Home() {
             Follow
           </Button>
         </div>
-        <div className='flex wrap gap-4 m-4'>
+        <div className='wrap m-4 flex gap-4'>
           <IconButton iconName={IconName.control} />
           <IconButton iconName={IconName.close} />
           <IconButton iconName={IconName.plus} />

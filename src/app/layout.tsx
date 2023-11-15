@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
 import { ToastContainer } from 'react-toastify';
@@ -13,8 +14,6 @@ const spaceGrotesk = Space_Grotesk({
   display: 'swap',
   variable: '--font-space-grotesk',
 });
-
-const inter = Space_Grotesk({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'WorkWave',
@@ -41,15 +40,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <AuthProvider>
-
     <html lang='en'>
-      <body className={inter.className}>
-        <Header />
-        {children}
-        <ToastContainer position='bottom-center' autoClose={1500} />
+      <body className={spaceGrotesk.className}>
+        <AuthProvider>
+          <Header />
+          {children}
+          <ToastContainer position='bottom-center' autoClose={1500} />
+        </AuthProvider>
       </body>
     </html>
-      </AuthProvider>
-      );
+  );
 }

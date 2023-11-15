@@ -1,13 +1,56 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:import/recommended", "prettier"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "airbnb",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:security/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
   "rules": {
     "import/order": [
       "error",
       {
-        "groups": [["builtin","external"], "internal", ["sibling", "parent"], "index"],
+        "groups": [["builtin", "external"], "internal", ["sibling", "parent"], "index"],
         "pathGroupsExcludedImportTypes": ["internal", "react"],
         "newlines-between": "always"
       }
+    ],
+    "no-console": "off",
+    "no-shadow": "off",
+    "react/button-has-type": "warn",
+    "camelcase": "off",
+    "no-unused-vars": "off",
+    "sonarjs/no-duplicate-string": "warn",
+    "react/require-default-props": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off",
+    "import/prefer-default-export": "off",
+    "security/detect-object-injection": "off",
+    "sonarjs/no-duplicate-string": "off",
+    "react/button-has-type": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".ts", ".tsx", ".js", ".jsx"]
+      }
     ]
-  }
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["import", "@typescript-eslint", "prettier"]
 }

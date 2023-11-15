@@ -17,6 +17,7 @@
     "axios": "^1.6.1",
     "bcryptjs": "^2.4.3",
     "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
     "mongoose": "^8.0.0",
     "next": "14.0.0",
     "next-auth": "^4.24.4",
@@ -31,22 +32,26 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
     "autoprefixer": "^10",
     "eslint": "^8",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "14.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-security": "^1.7.1",
+    "eslint-plugin-sonarjs": "^0.23.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2",
     "postcss": "^8",
     "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.7",
     "tailwindcss": "^3",
     "typescript": "^5"
-  },
-  "lint-staged": {
-    "*": [
-      "npm run format",
-      "npm run lint"
-    ]
   }
 }

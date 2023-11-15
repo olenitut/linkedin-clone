@@ -9,6 +9,6 @@ type ContainerProps = {
 
 export function Container({ children, className }: ContainerProps) {
   return (
-    <div className={mergeClasses('w-full mx-auto px-5 max-w-screen-xl', className)}>{children}</div>
+    <div className={mergeClasses('mx-auto w-full max-w-screen-xl px-5', className)}>{children}</div>
   );
 }

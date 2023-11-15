@@ -1,4 +1,4 @@
-import { email, minLength, object, parse, string, safeParse } from 'valibot';
+import { email, minLength, object, string, safeParse } from 'valibot';
 import axios from 'axios';
 
 import { UserRes } from '@/types/user';
@@ -21,12 +21,16 @@ export async function signup(prevState: any, formData: FormData) {
 
     if (signupData.success) {
       const { data }: { data: UserRes } = await axios.post('/api/signup', signupData.output);
-      return data;
-    } else {
-      return { issues: signupData.issues };
+      return { success: data.message };
     }
-  } catch (err) {
-    const title = err instanceof Error ? err.message : 'Error connecting to server';
+    return { issues: signupData.issues };
+  } catch (err: any) {
+    let title;
+    if (err.response) {
+      title = err.response.data.message;
+    } else {
+      title = err instanceof Error ? err.message : 'Error connecting to server';
+    }
     return { error: title };
   }
 }
