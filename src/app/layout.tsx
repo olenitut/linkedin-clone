@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import { Header } from '@/components/ui/layouts';
 import { AuthProvider } from '@/providers';
 
-import './globals.css';
+import '../css/globals.css';
 import 'react-toastify/dist/ReactToastify.min.css';
 
 const spaceGrotesk = Space_Grotesk({
@@ -42,11 +42,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <body className={spaceGrotesk.className}>
-        <div id='overlay' />
         <AuthProvider>
-          <Header />
-          {children}
-          <ToastContainer position='bottom-center' autoClose={2200} />
+          <div id='overlay' />
+          <div className='flex flex-col'>
+            <Header />
+            {children}
+            <ToastContainer position='bottom-center' autoClose={2200} />
+          </div>
         </AuthProvider>
       </body>
     </html>

@@ -17,13 +17,13 @@ export const typographyVariants = cva('font-sans', {
     intent: {
       [TypographyVariant.Base]: ['text-base'],
       [TypographyVariant.Small]: ['text-sm'],
-      [TypographyVariant.Large]: ['text-lg'],
+      [TypographyVariant.Large]: ['text-base', 'md:text-lg'],
       [TypographyVariant.ExtraLarge]: ['text-xl'],
       [TypographyVariant.Error]: ['text-[11px]', 'text-red-600'],
-      [TypographyVariant.h1]: ['text-4xl', 'sm-5xl', 'font-semibold'],
-      [TypographyVariant.h2]: ['text-3xl', 'sm:text-4xl', 'font-semibold'],
-      [TypographyVariant.h3]: ['text-2xl', 'sm:text-3xl', 'font-medium'],
-      [TypographyVariant.h4]: ['text-1xl', 'sm:text-2xl', 'font-medium'],
+      [TypographyVariant.h1]: ['text-4xl', 'md-5xl', 'font-semibold'],
+      [TypographyVariant.h2]: ['text-3xl', 'md:text-4xl', 'font-semibold'],
+      [TypographyVariant.h3]: ['text-2xl', 'md:text-3xl', 'font-medium'],
+      [TypographyVariant.h4]: ['text-xl', 'md:text-2xl', 'font-medium'],
     },
   },
 
