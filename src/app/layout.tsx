@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import { Header } from '@/components/ui/layouts';
 import { AuthProvider } from '@/providers';
 
-import './globals.css';
+import '../css/globals.css';
 import 'react-toastify/dist/ReactToastify.min.css';
 
 const spaceGrotesk = Space_Grotesk({

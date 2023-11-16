@@ -1,11 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Container } from '@/components/ui/layouts';
+import { Container, Footer } from '@/components/ui/layouts';
 import { Typography, TypographyVariant } from '@/components/ui/typography';
 import HeroImage from 'public/assets/images/hero.webp';
 import { Button, ButtonSize, ButtonVariant } from '@/components/ui/buttons';
 import { Logo } from '@/components/ui/layouts/Header/components';
+
+import '../css/home.css';
 
 export default function Home() {
   return (
@@ -37,10 +39,14 @@ export default function Home() {
                 </Typography>
                 <Link href='signup'>
                   <Button
-                    variant={ButtonVariant.Secondary}
-                    size={ButtonSize.Medium}
-                    className='w-[160px] uppercase tracking-wide'
+                    variant={ButtonVariant.Primary}
+                    size={ButtonSize.Large}
+                    className='animated-button !w-[160px] uppercase tracking-wide'
                   >
+                    <span />
+                    <span />
+                    <span />
+                    <span />
                     Join
                   </Button>
                 </Link>
@@ -99,47 +105,7 @@ export default function Home() {
         </Container>
       </main>
 
-      <footer className='mt-20 bg-red-10 pb-10 pt-10'>
-        <Container>
-          <div className='flex items-center justify-between'>
-            <Logo className='self-start' />
-            <div>
-              <Typography variant={TypographyVariant.Base} className='pb-2 font-medium'>
-                Authors
-              </Typography>
-              <ul>
-                <li>
-                  <a
-                    href='https://www.linkedin.com/in/anastasiia-hordieieva-295319259/'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    Anastasiia Hordieieva
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href='https://www.linkedin.com/in/olia-dovbush/'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    Olha Dovbush{' '}
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <Typography variant={TypographyVariant.Base} className='pb-2 font-medium'>
-                About us
-              </Typography>
-              <ul>
-                <li>Terms of use</li>
-                <li>Cookies</li>
-              </ul>
-            </div>
-          </div>
-        </Container>
-      </footer>
+      <Footer />
     </>
   );
 }
