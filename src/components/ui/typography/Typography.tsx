@@ -3,7 +3,7 @@ import React from 'react';
 import { TypographyVariant, typographyVariants } from './typography-variants';
 
 type TypographyProps = {
-  children: string;
+  children: string | React.ReactNode;
   variant?: TypographyVariant;
   as?: React.ElementType;
   className?: string;
