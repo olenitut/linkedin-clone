@@ -1,81 +1,145 @@
-import { ButtonSize, ButtonVariant } from '@/components/ui/buttons/main/button-variants';
-import { Container } from '@/components/ui/layouts';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { Button, IconButton, IconName } from '../components/ui/buttons';
+import { Container } from '@/components/ui/layouts';
+import { Typography, TypographyVariant } from '@/components/ui/typography';
+import HeroImage from 'public/assets/images/hero.webp';
+import { Button, ButtonSize, ButtonVariant } from '@/components/ui/buttons';
+import { Logo } from '@/components/ui/layouts/Header/components';
 
 export default function Home() {
   return (
-    <Container>
-      <main className='flex flex-col items-center justify-center'>
-        <div className='wrap m-20 flex gap-4'>
-          <Button size={ButtonSize.Large} variant={ButtonVariant.Primary}>
-            Large
-          </Button>
-          <Button variant={ButtonVariant.Primary} size={ButtonSize.Medium}>
-            Medium
-          </Button>
-          <Button variant={ButtonVariant.Primary} size={ButtonSize.Small}>
-            Small
-          </Button>
-          <Button variant={ButtonVariant.Secondary} size={ButtonSize.Medium}>
-            Secondary
-          </Button>
-        </div>
+    <>
+      <main className='grow'>
+        <Container>
+          <div className='flex flex-col items-center justify-center py-8'>
+            <Typography variant={TypographyVariant.h2} as='h1' className='max-w-md text-center'>
+              Welcome to Work<span className='text-red-700'>W</span>ave{' '}
+              <Typography variant={TypographyVariant.h4} as='span' className='text-red-700'>
+                Where Professionals Connect!
+              </Typography>
+            </Typography>
+            <div className='flex items-center justify-between'>
+              <div className='flex basis-2/4 flex-col items-center justify-between gap-8'>
+                <Typography variant={TypographyVariant.Large}>
+                  Unlock endless opportunities for career growth, networking, and industry insights.
+                  Join our vibrant community of professionals from around the world. Whether
+                  you&apos;re looking for your next career move, eager to expand your professional
+                  network, or seeking valuable industry knowledge,{' '}
+                  <Typography
+                    variant={TypographyVariant.Large}
+                    as='span'
+                    className='font-medium text-red-700'
+                  >
+                    WorkWave
+                  </Typography>{' '}
+                  is your gateway to success.
+                </Typography>
+                <Link href='signup'>
+                  <Button
+                    variant={ButtonVariant.Secondary}
+                    size={ButtonSize.Medium}
+                    className='w-[160px] uppercase tracking-wide'
+                  >
+                    Join
+                  </Button>
+                </Link>
+              </div>
 
-        <div className='wrap m-4 flex gap-4'>
-          <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} iconName={IconName.share}>
-            Share
-          </Button>
-          <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} iconName={IconName.job}>
-            Job
-          </Button>
-          <Button
-            size={ButtonSize.Medium}
-            variant={ButtonVariant.Ghost}
-            iconName={IconName.article}
-          >
-            Write article
-          </Button>
-        </div>
-        <div className='wrap m-4 flex gap-4'>
-          <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} iconName={IconName.like}>
-            Like
-          </Button>
-          <Button
-            size={ButtonSize.Medium}
-            variant={ButtonVariant.Ghost}
-            iconName={IconName.comment}
-          >
-            Comment
-          </Button>
-          <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} iconName={IconName.repost}>
-            Repost
-          </Button>
-          <Button size={ButtonSize.Medium} variant={ButtonVariant.Ghost} iconName={IconName.send}>
-            Send
-          </Button>
-          <Button
-            size={ButtonSize.Medium}
-            variant={ButtonVariant.Ghost}
-            iconName={IconName.follow}
-            className='!text-red-700'
-          >
-            Follow
-          </Button>
-        </div>
-        <div className='wrap m-4 flex gap-4'>
-          <IconButton iconName={IconName.control} />
-          <IconButton iconName={IconName.close} />
-          <IconButton iconName={IconName.plus} />
-          <IconButton iconName={IconName.smile} />
-          <IconButton iconName={IconName.star} />
-
-          <IconButton iconName={IconName.controlMini} height='mini' />
-          <IconButton iconName={IconName.pencil} height='mini' />
-          <IconButton iconName={IconName.up} height='mini' />
-          <IconButton iconName={IconName.down} height='mini' />
-        </div>
+              <div className='basis-2/4'>
+                <Image src={HeroImage} alt='hero' width={511} height={511} />
+              </div>
+            </div>
+            <div className='flex flex-col items-center justify-center'>
+              <Typography variant={TypographyVariant.h4} as='h2'>
+                Why Join WorkWave?
+              </Typography>
+              <ul className='flex list-disc flex-col items-start justify-center gap-1.5 pt-4'>
+                <li>Connect with like-minded professionals in your industry.</li>
+                <li>Discover exciting job opportunities tailored to your skills.</li>
+                <li>Stay informed with the latest trends and insights in your field.</li>
+                <li>Build a strong online presence and showcase your professional journey.</li>
+              </ul>
+            </div>
+            <div className='flex flex-col items-start justify-center self-start pt-16'>
+              <Typography variant={TypographyVariant.h4} as='h3'>
+                How it works?
+              </Typography>
+              <ul className='flex list-disc flex-col items-start justify-center gap-1.5 pt-4'>
+                <li>
+                  <span className='font-medium'>Step 1: Sign Up </span> - Create your account with a
+                  few simple details.
+                </li>
+                <li>
+                  <span className='font-medium'>Step 2: Build Your Profile </span> - Showcase your
+                  skills, experience, and achievements.
+                </li>
+                <li>
+                  <span className='font-medium'>Step 3: Connect </span> - Start building your
+                  professional network by connecting with colleagues and industry professionals.
+                </li>
+              </ul>
+            </div>
+            <div className='relative flex w-full items-center justify-between self-start'>
+              <Typography variant={TypographyVariant.h3} as='h4'>
+                Connect to your colleagues
+              </Typography>
+              <div className='h-[400px] w-[700px] bg-home-team bg-cover bg-right bg-no-repeat' />
+            </div>
+            <div className='relative flex w-full items-center gap-20 self-start'>
+              <div className='top-[400px] h-[400px] w-[550px] bg-home-group bg-cover bg-left bg-no-repeat' />
+              <Typography variant={TypographyVariant.h3}>and friends on WorkWave</Typography>
+            </div>
+            <Link href='/signup'>
+              <Button variant={ButtonVariant.Primary} size={ButtonSize.Large} className='w-[200px]'>
+                Get Started
+              </Button>
+            </Link>
+          </div>
+        </Container>
       </main>
-    </Container>
+
+      <footer className='mt-20 bg-red-10 pb-10 pt-10'>
+        <Container>
+          <div className='flex items-center justify-between'>
+            <Logo className='self-start' />
+            <div>
+              <Typography variant={TypographyVariant.Base} className='pb-2 font-medium'>
+                Authors
+              </Typography>
+              <ul>
+                <li>
+                  <a
+                    href='https://www.linkedin.com/in/anastasiia-hordieieva-295319259/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    Anastasiia Hordieieva
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href='https://www.linkedin.com/in/olia-dovbush/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    Olha Dovbush{' '}
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <Typography variant={TypographyVariant.Base} className='pb-2 font-medium'>
+                About us
+              </Typography>
+              <ul>
+                <li>Terms of use</li>
+                <li>Cookies</li>
+              </ul>
+            </div>
+          </div>
+        </Container>
+      </footer>
+    </>
   );
 }

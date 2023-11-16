@@ -18,6 +18,8 @@ const config: Config = {
         'signup-pattern': "url('/assets/images/signup-bg.webp')",
         'signin-pattern': "url('/assets/images/signin-bg.webp')",
         'after-login': "url('/assets/images/after-login.gif')",
+        'home-team': "url('/assets/images/team.webp')",
+        'home-group': "url('/assets/images/group.webp')",
       },
       keyframes: {
         fadeIn: {
