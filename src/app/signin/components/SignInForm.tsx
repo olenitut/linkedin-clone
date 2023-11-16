@@ -1,12 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import { FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/navigation';
 
-import { CustomInput } from '@/components/ui/inputs';
+import { CustomInput, PasswordInput } from '@/components/ui/inputs';
 import { Typography, TypographyVariant } from '@/components/ui/typography';
 import { Button, ButtonSize, ButtonVariant } from '@/components/ui/buttons';
 
@@ -53,17 +53,20 @@ export function SignInForm() {
         onChange={(e) => setLoginEmail(e.target.value)}
       />
       <div className='flex flex-col items-center gap-1'>
-        <CustomInput
+        <PasswordInput
           isRequired
-          type='password'
+          hasLabel
           placeholder='Password'
           label='Password'
           value={loginPass}
-          onChange={(e) => setLoginPass(e.target.value)}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => setLoginPass(e.target.value)}
         />
 
         <Link href='/forgot-password' className='self-end'>
-          <Typography variant={TypographyVariant.Small} className='text-black-backdrop'>
+          <Typography
+            variant={TypographyVariant.Small}
+            className='text-black-backdrop transition-colors delay-150 hover:text-red-900'
+          >
             Forgot?
           </Typography>
         </Link>

@@ -6,7 +6,7 @@ import { clsx } from 'clsx';
 import { TypographyVariant } from '@/components/ui/typography/typography-variants';
 import { Typography } from '@/components/ui/typography';
 
-type InputProps = {
+export type InputProps = {
   name?: string;
   type?: string;
   className?: string;
