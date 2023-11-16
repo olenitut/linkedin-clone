@@ -4,10 +4,10 @@ import { Typography, TypographyVariant } from '@/components/ui/typography';
 
 export function Footer() {
   return (
-    <footer className='mt-20 bg-red-10 pb-10 pt-10'>
+    <footer className='mt-10 bg-red-10 pb-10 pt-10 md:mt-20'>
       <Container>
         <div className='flex items-center justify-between'>
-          <Logo className='self-start' />
+          <Logo className='hidden self-start sm:block' />
           <div>
             <Typography variant={TypographyVariant.Base} className='pb-2 font-medium'>
               Authors

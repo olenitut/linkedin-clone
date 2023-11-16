@@ -12,13 +12,13 @@ export function PublicNavbar() {
   return (
     <div className='flex h-16 items-center justify-between'>
       <div className='flex items-center gap-8'>
-        <Logo />
+        <Logo className='shrink-0' />
         <Link
           href='/'
           className={buttonVariants({
             intent: ButtonVariant.Ghost,
             size: ButtonSize.Medium,
-            className: 'block h-full text-lg text-red-800 opacity-70',
+            className: 'block hidden h-full text-lg text-red-800 opacity-70 sm:block',
           })}
         >
           Home
@@ -31,7 +31,7 @@ export function PublicNavbar() {
           className={buttonVariants({
             intent: ButtonVariant.Ghost,
             size: ButtonSize.Medium,
-            className: 'block h-full text-lg text-red-800 opacity-70',
+            className: 'block hidden h-full text-lg text-red-800 opacity-70 sm:block',
           })}
         >
           Sign Up
@@ -41,7 +41,7 @@ export function PublicNavbar() {
           className={buttonVariants({
             intent: ButtonVariant.Secondary,
             size: ButtonSize.Medium,
-            className: 'block h-full text-lg text-red-800 opacity-70',
+            className: 'block h-full text-lg',
           })}
         >
           Sign In
