@@ -42,11 +42,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <body className={spaceGrotesk.className}>
-        <div id='overlay' />
         <AuthProvider>
-          <Header />
-          {children}
-          <ToastContainer position='bottom-center' autoClose={2200} />
+          <div id='overlay' />
+          <div className='flex flex-col'>
+            <Header />
+            {children}
+            <ToastContainer position='bottom-center' autoClose={2200} />
+          </div>
         </AuthProvider>
       </body>
     </html>
