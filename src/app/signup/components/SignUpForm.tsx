@@ -5,7 +5,7 @@ import { useFormState, useFormStatus } from 'react-dom';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 
-import { CustomInput } from '@/components/ui/inputs';
+import { CustomInput, PasswordInput } from '@/components/ui/inputs';
 import { Typography, TypographyVariant } from '@/components/ui/typography';
 import { Button, ButtonSize, ButtonVariant } from '@/components/ui/buttons';
 import { Spinner } from '@/components/ui/spinner';
@@ -49,8 +49,7 @@ export function SignUpForm() {
 
         <CustomInput placeholder='Email' name='email' isRequired error={signupIssues?.email} />
 
-        <CustomInput
-          type='password'
+        <PasswordInput
           placeholder='Password'
           name='password'
           isRequired

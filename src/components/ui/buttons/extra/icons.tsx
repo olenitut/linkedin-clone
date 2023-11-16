@@ -15,6 +15,8 @@ import {
   EllipsisHorizontalIcon,
   FaceSmileIcon,
   StarIcon,
+  EyeIcon,
+  EyeSlashIcon,
 } from '@heroicons/react/24/outline';
 import {
   EllipsisHorizontalIcon as EllipseHorizontalMini,
@@ -46,6 +48,8 @@ export const icons: Icon = {
   up: <ChevronUpIcon className='h-5 w-5 text-red-950' />,
   down: <ChevronDownIcon className='h-5 w-5 text-red-950' />,
   left: <ArrowLeftIcon className='h-5 w-5 text-red-950' />,
+  eye: <EyeIcon className='h-5 w-5 text-red-950' />,
+  eyeClosed: <EyeSlashIcon className='h-5 w-5 text-red-950' />,
 };
 
 export enum IconName {
@@ -67,4 +71,6 @@ export enum IconName {
   up = 'up',
   down = 'down',
   left = 'left',
+  eye = 'eye',
+  eyeClosed = 'eyeClosed',
 }
