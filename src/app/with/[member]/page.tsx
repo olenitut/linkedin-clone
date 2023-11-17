@@ -1,6 +1,6 @@
 import { getMemberInfo } from '@/app/api/member';
 import { Typography, TypographyVariant } from '@/components/ui/typography';
-import { TopCard } from '@/app/with/components';
+import { SidePanel, TopCard } from '@/app/with/components';
 import { Container } from '@/components/ui/layouts';
 
 export default async function MemberPage({ params }: { params: { member: string } }) {
@@ -19,9 +19,10 @@ export default async function MemberPage({ params }: { params: { member: string 
   }
 
   return (
-    <main className='pt-5'>
-      <Container>
+    <main className='pt-5 md:p-8'>
+      <Container className='flex items-start justify-between gap-5'>
         <TopCard member={member} />
+        <SidePanel />
       </Container>
     </main>
   );
