@@ -1,10 +1,13 @@
 import { getMemberInfo } from '@/app/api/member';
 import { Typography, TypographyVariant } from '@/components/ui/typography';
-import { SidePanel, TopCard } from '@/app/with/components';
 import { Container } from '@/components/ui/layouts';
+import { getAboutInfo } from '@/app/api/member/about';
+
+import { AboutSection, SidePanel, TopCard } from '../components';
 
 export default async function MemberPage({ params }: { params: { member: string } }) {
   const member = await getMemberInfo(params.member);
+  const about = await getAboutInfo(params.member);
 
   if (!member) {
     return (
@@ -21,7 +24,10 @@ export default async function MemberPage({ params }: { params: { member: string 
   return (
     <main className='pt-5 md:p-8'>
       <Container className='flex items-start justify-between gap-5'>
-        <TopCard member={member} />
+        <div className='flex flex-col justify-center gap-5'>
+          <TopCard member={member} />
+          {about && <AboutSection about={about} />}
+        </div>
         <SidePanel />
       </Container>
     </main>
