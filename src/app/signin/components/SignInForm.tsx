@@ -26,7 +26,7 @@ export function SignInForm() {
       email: loginEmail,
       password: loginPass,
       redirect: false,
-      callbackUrl: '/feed',
+      callbackUrl: '/with/olia-dovbush',
     });
 
     if (signinResponse?.error) {

@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        mobile: '360px',
+      },
       boxShadow: {
         modal:
           'rgb(0 0 0 / 0%) 0 0 0 0, rgb(0 0 0 / 0%) 0 0 0 0, rgb(0 0 0 / 10%) 0 10px 15px -3px, rgb(0 0 0 / 10%) 0 4px 6px -4px',
@@ -75,6 +78,7 @@ const config: Config = {
         '150': '#e4e4e7',
         '200': '#e5e7eb',
         '300': '#8893c7',
+        '400': 'rgba(204 204 204 / 60%)',
         '500': '#78716c',
         '600': '#7e7476',
       },
