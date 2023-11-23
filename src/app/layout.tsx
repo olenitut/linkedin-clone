@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { Space_Grotesk } from 'next/font/google';
+// import { Space_Grotesk } from 'next/font/google';
 import { ToastContainer } from 'react-toastify';
 
 import { Header } from '@/components/ui/layouts';
@@ -10,11 +10,11 @@ import StyledComponentsRegistry from '@/lib/StyledComponentsRegistry';
 import '../css/globals.css';
 import 'react-toastify/dist/ReactToastify.min.css';
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-space-grotesk',
-});
+// const spaceGrotesk = Space_Grotesk({
+//   subsets: ['latin'],
+//   display: 'swap',
+//   variable: '--font-space-grotesk',
+// });
 
 export const metadata: Metadata = {
   title: 'WorkWave',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={spaceGrotesk.className}>
+      <body>
         <StyledComponentsRegistry>
           <AuthProvider>
             <div id='overlay' />
