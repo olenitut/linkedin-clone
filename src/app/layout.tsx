@@ -1,19 +1,20 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { Space_Grotesk } from 'next/font/google';
+// import { Space_Grotesk } from 'next/font/google';
 import { ToastContainer } from 'react-toastify';
 
 import { Header } from '@/components/ui/layouts';
 import { AuthProvider } from '@/providers';
+import StyledComponentsRegistry from '@/lib/StyledComponentsRegistry';
 
 import '../css/globals.css';
 import 'react-toastify/dist/ReactToastify.min.css';
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-space-grotesk',
-});
+// const spaceGrotesk = Space_Grotesk({
+//   subsets: ['latin'],
+//   display: 'swap',
+//   variable: '--font-space-grotesk',
+// });
 
 export const metadata: Metadata = {
   title: 'WorkWave',
@@ -41,15 +42,17 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={spaceGrotesk.className}>
-        <AuthProvider>
-          <div id='overlay' />
-          <div className='flex flex-col'>
-            <Header />
-            {children}
-            <ToastContainer position='bottom-center' autoClose={2200} />
-          </div>
-        </AuthProvider>
+      <body>
+        <StyledComponentsRegistry>
+          <AuthProvider>
+            <div id='overlay' />
+            <div className='flex flex-col'>
+              <Header />
+              {children}
+              <ToastContainer position='bottom-center' autoClose={2200} />
+            </div>
+          </AuthProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
